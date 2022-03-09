@@ -11,12 +11,7 @@ export default function Home({ story: initialStory }) {
     return <div>Loading...</div>
   }
 
-  return (
-    <>
-      <p>Home page</p>
-      <StoryblokComponent blok={story.content} />
-    </>
-  )
+  return <StoryblokComponent blok={story.content} />
 }
 
 export async function getStaticProps({ preview = false }) {
