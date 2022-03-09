@@ -1,5 +1,5 @@
-import React from "react";
-import { storyblokEditable } from "@storyblok/react";
+import React from "react"
+import { storyblokEditable } from "@storyblok/react"
 
 const Feature = ({ blok }) => {
   return (
@@ -9,7 +9,7 @@ const Feature = ({ blok }) => {
         <p>{blok.description}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Feature;
+export default Feature

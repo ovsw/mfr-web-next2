@@ -1,5 +1,5 @@
-import React from "react";
-import { storyblokEditable } from "@storyblok/react";
+import React from "react"
+import { storyblokEditable } from "@storyblok/react"
 
 const Teaser = ({ blok }) => {
   return (
@@ -8,7 +8,7 @@ const Teaser = ({ blok }) => {
         <h2>{blok.headline}</h2>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Teaser;
+export default Teaser
