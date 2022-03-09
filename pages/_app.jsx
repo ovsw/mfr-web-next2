@@ -5,7 +5,7 @@ import Page from "../src/components/page";
 import Feature from "../src/components/feature";
 
 storyblokInit({
-  accessToken: "OurklwV5XsDJTIE1NJaD2wtt",
+  accessToken: process.env.STORYBLOK_API_KEY,
   use: [apiPlugin],
   components: {
     teaser: Teaser,
