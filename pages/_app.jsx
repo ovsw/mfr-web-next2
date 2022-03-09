@@ -1,8 +1,8 @@
 import { storyblokInit, apiPlugin } from "@storyblok/react";
-import Teaser from "../components/teaser";
-import Grid from "../components/grid";
-import Page from "../components/page";
-import Feature from "../components/feature";
+import Teaser from "../src/components/teaser";
+import Grid from "../src/components/grid";
+import Page from "../src/components/page";
+import Feature from "../src/components/feature";
 
 storyblokInit({
   accessToken: "OurklwV5XsDJTIE1NJaD2wtt",
@@ -16,7 +16,7 @@ storyblokInit({
 });
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
