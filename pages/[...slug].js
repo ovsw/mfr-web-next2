@@ -1,8 +1,5 @@
-// import DynamicComponent from "@/components/Dc"
 import Head from "next/head"
-// import styles from "../styles/Home.module.css"
 
-// import Storyblok, { useStoryblok } from "../lib/storyblok"
 import {
   useStoryblokState,
   useStoryblokApi,
@@ -14,6 +11,10 @@ export default function Page({ story: initialStory, preview }) {
   // const enableBridge = preview // enable bridge only in prevew mode
   const story = useStoryblokState(initialStory)
 
+  if (!story.content) {
+    return <div>Loading...</div>
+  }
+
   return (
     <>
       <Head>
@@ -21,7 +22,6 @@ export default function Page({ story: initialStory, preview }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <DynamicComponent blok={story.content} /> */}
       <StoryblokComponent blok={story.content} />
     </>
   )
@@ -46,7 +46,7 @@ export async function getStaticProps({ params, preview = false }) {
   const storyblokApi = useStoryblokApi()
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
     version: "draft",
-    cv: Date.now(),
+    // cv: Date.now(),
   })
 
   return {
@@ -54,7 +54,7 @@ export async function getStaticProps({ params, preview = false }) {
       story: data ? data.story : null,
       preview,
     },
-    // revalidate: 3600, // revalidate every hour
+    revalidate: 3600, // revalidate every hour
   }
 }
 
