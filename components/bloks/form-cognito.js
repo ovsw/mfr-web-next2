@@ -3,7 +3,7 @@ import Script from "next/script"
 
 const Form = ({ blok: cognitoForm }) => {
   return (
-    <div class="cognito">
+    <div className="cognito">
       <Script
         src="https://www.cognitoforms.com/s/xPoircp7HEGoNo_tpFEirg"
         strategy="beforeInteractive"
