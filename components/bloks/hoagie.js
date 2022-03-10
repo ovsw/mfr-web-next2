@@ -22,7 +22,9 @@ const Hoagie = ({ blok: hoagie }) => {
     <li className="relative full-width">
       {/* IMAGE */}
       <div className={`lg:absolute lg:top-20 ${imageWrapperStyles} lg:w-1/2`}>
-        <div className={`lg:absolute ${imageStyles} w-[1200px] max-w-[100vw] px-10 lg:px-0`}>
+        <div
+          className={`lg:absolute ${imageStyles} w-[1200px] max-w-[100vw] px-10 lg:px-0`}
+        >
           <Image
             className=""
             src={image?.filename}
