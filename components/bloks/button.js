@@ -44,10 +44,10 @@ const Button = ({ blok: button }) => {
 
   // PREPARE ICONS
   const LeftIcon = (
-    <Icon name={icon} height="1.5em"  title="icon" className="mr-3" />
+    <Icon name={icon} height="1.5em" title="icon" className="mr-3" />
   )
   const RightIcon = (
-    <Icon name={icon} height="1.5em"  title="icon" className="ml-3" />
+    <Icon name={icon} height="1.5em" title="icon" className="ml-3" />
   )
 
   // console.log("link object", button.link?.anchor)
