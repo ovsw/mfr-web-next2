@@ -160,6 +160,10 @@
   .custom-table th {
     @apply px-2 py-1;
   }
+
+  .main {
+    @apply pt-24;
+  }
 }
 
 @layer utilities {
