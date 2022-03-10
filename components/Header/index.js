@@ -145,7 +145,7 @@ const Header = ({ props }) => {
                   <div className="pt-5 pb-6 px-5">
                     {/* MOBILE MENU TOP */}
                     <div className="flex items-center justify-between">
-                      <Link href="">
+                      <Link href="/">
                         <a className="w-24">
                           <Image
                             src={DesktopLogo}
@@ -167,21 +167,19 @@ const Header = ({ props }) => {
                     <div className="mt-6">
                       <nav className="grid grid-cols-1 gap-7">
                         {mobileMainMenu.map(item => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className="-m-3 p-3 flex items-center rounded-lg hover:bg-stone-50"
-                          >
-                            <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-red-600 to-accent text-white">
-                              <item.icon
-                                className="h-6 w-6"
-                                aria-hidden="true"
-                              />
-                            </div>
-                            <div className="ml-4 text-base font-medium text-stone-900">
-                              {item.name}
-                            </div>
-                          </a>
+                          <Link key={item.name} href={item.href}>
+                            <a className="-m-3 p-3 flex items-center rounded-lg hover:bg-stone-50">
+                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-red-600 to-accent text-white">
+                                <item.icon
+                                  className="h-6 w-6"
+                                  aria-hidden="true"
+                                />
+                              </div>
+                              <div className="ml-4 text-base font-medium text-stone-900">
+                                {item.name}
+                              </div>
+                            </a>
+                          </Link>
                         ))}
                       </nav>
                     </div>
