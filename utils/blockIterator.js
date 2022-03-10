@@ -20,7 +20,7 @@ export function blockIterator(bloksArr) {
   }
   if (bloksArr.length == 0) {
     return (
-      <p className="mx-auto max-w-2xl text-bold py-10">
+      <p className="mx-auto max-w-2xl text-center text-bold py-10">
         No content here ༼ つ ◕_◕ ༽つ ... please add some{" "}
       </p>
     )
