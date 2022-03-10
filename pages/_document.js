@@ -8,10 +8,10 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="stylesheet" href="https://use.typekit.net/ops4vzn.css" />
-          <link
+          {/* <link
             href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
             rel="stylesheet"
-          />
+          /> */}
         </Head>
         <body className="overflow-x-hidden">
           <Main />
