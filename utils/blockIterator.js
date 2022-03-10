@@ -26,11 +26,9 @@ export function blockIterator(bloksArr) {
     )
   }
   const output = bloksArr.map(blok => (
-    <StoryblokComponent
-      blok={blok}
-      key={blok._uid}
-      {...storyblokEditable(blok)}
-    />
+    <div key={blok._uid} {...storyblokEditable(blok)}>
+      <StoryblokComponent blok={blok} />
+    </div>
   ))
   return output
 }
