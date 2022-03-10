@@ -40,7 +40,7 @@ const HeroTemplate = ({
   return (
     <div className={`Hero bgs-[#1e212b] ${sidesBgStyles[background_color]}`}>
       <div className=" max-w-[1600px] mx-auto max-h-[70vh]">
-        <div className="relative bg-stone-300 max-h-[70vh] z-10">
+        <div className="relative bg-stone-300 max-h-[70vh] z-0">
           {/* IMAGE */}
           {background_image?.filename && (
             <div className="absolute inset-0 max-h-[70vh]">
