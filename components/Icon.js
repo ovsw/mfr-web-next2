@@ -60,11 +60,9 @@ const iconTypes = {
 const IconComponent = ({ name, ...props }) => {
   if (iconTypes[name] != undefined) {
     let Icon = iconTypes[name]
-    // return <Icon {...props} />
-    return <span>icon</span>
+    return <Icon {...props} />
   } else {
-    // return <ChevronRight {...props} />
-    return <span>icon</span>
+    return <ChevronRight {...props} />
   }
 }
 
