@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
+import { useRouter } from "next/router"
 
 // import Teaser from "../components/teaser"
 // import Feature from "../components/feature"
@@ -104,7 +105,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Header />
-      <Component {...pageProps} />
+      <Component {...pageProps} key={router.asPath} />
       <Footer />
     </>
   )
