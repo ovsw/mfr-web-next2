@@ -5,6 +5,7 @@ import {
 } from "@storyblok/react"
 import Head from "next/head"
 import PostListFeatured from "../components/posts-list-featured"
+import Header from "../components/Header"
 
 export default function Home({ story: initialStory, recentPosts }) {
   const story = useStoryblokState(initialStory)
@@ -19,6 +20,7 @@ export default function Home({ story: initialStory, recentPosts }) {
         <title>{story ? story.name : "My Site"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       {/* {story.content && <StoryblokComponent blok={story.content} />} */}
       <main className="main bg-themeFill-offWhite">
         <div className="newsWrapper pt-20">

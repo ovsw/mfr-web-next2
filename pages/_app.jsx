@@ -106,7 +106,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Header />
       <Component {...pageProps} key={router.asPath} />
       <Footer />
     </>

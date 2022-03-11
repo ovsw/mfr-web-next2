@@ -5,6 +5,7 @@ import {
   useStoryblokApi,
   StoryblokComponent,
 } from "@storyblok/react"
+import Header from "../components/Header"
 
 export default function Page({ story: initialStory, preview }) {
   // const enableBridge = true; // load the storyblok bridge everywhere
@@ -21,6 +22,7 @@ export default function Page({ story: initialStory, preview }) {
         <title>{story ? story.name : "My Site"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
 
       <StoryblokComponent blok={story.content} />
     </>
