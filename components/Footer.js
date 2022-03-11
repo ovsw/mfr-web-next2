@@ -33,8 +33,8 @@ const navigation = {
     // { name: "Partners", href: "#" },
   ],
   legal: [
-    { name: "Accessibility Statement", href: "#" },
-    { name: "Accessibility Policy", href: "#" },
+    { name: "Accessibility Statement", href: "/accessibility-statement" },
+    { name: "Accessibility Policy", href: "/accessibility-policy" },
     { name: "Privacy", href: "/privacy-policy" },
     { name: "Terms", href: "/terms-and-conditions" },
   ],
