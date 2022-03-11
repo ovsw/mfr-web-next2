@@ -32,6 +32,7 @@ import RowBigImage from "../components/bloks/row-big-image"
 import RowTestimonials from "../components/bloks/row-testimonials"
 import RowMenuListing from "../components/bloks/row-menu-listing"
 import Hoagie from "../components/bloks/hoagie"
+import Pizza from "../components/bloks/pizza"
 import RowThreeSteps from "../components/bloks/row-three-steps"
 import Step from "../components/bloks/step"
 import RowMenuTeaserOneOff from "../components/bloks/row-menu-teaser-one-off"
@@ -72,6 +73,7 @@ storyblokInit({
     "row-testimonials": RowTestimonials,
     "row-menu-listing": RowMenuListing,
     hoagie: Hoagie,
+    pizza: Pizza,
     "row-steps": RowThreeSteps,
     step: Step,
     "row-menu-teaser-one-off": RowMenuTeaserOneOff,
