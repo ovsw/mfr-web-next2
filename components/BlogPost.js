@@ -5,10 +5,10 @@
 //  title: text
 
 import readingTime from "reading-time"
-import { Image, getPlainText } from "@storyofams/storyblok-toolkit"
-import RichTextRenderer from "./richTextRenderer"
+import { getPlainText } from "@storyofams/storyblok-toolkit"
 
 import { blogAuthors } from "../utils/blogAuthors"
+import { blockIterator } from "../utils/blockIterator"
 
 const Page = ({ blok }) => {
   // console.log("blog post blok", blok)
@@ -56,10 +56,9 @@ const Page = ({ blok }) => {
               </div>
             </div>
           </div>
-
-          <RichTextRenderer data={body} />
         </div>
       </section>
+      {blockIterator(body)}
     </main>
   )
 }

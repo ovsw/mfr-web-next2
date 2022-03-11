@@ -10,7 +10,7 @@ import Icon from "../Icon"
 const Hoagie = ({ blok: hoagie }) => {
   // console.log("hoagie", hoagie.link)
 
-  const { name, dressing, description, link, image, type } = hoagie
+  const { name, dressing, description, link, image } = hoagie
 
   const reversed = false
   const contentStyles = reversed ? "lg:col-start-2" : ""
@@ -63,7 +63,7 @@ const Hoagie = ({ blok: hoagie }) => {
                 <Link href={`/${link.cached_url}`}>
                   <a className="btn btn-accent">
                     <Icon
-                      name={type}
+                      name="hoagie"
                       height="1.5em"
                       title="icon"
                       className="mr-3"
