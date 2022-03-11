@@ -19,8 +19,12 @@ export default function Home({ story: initialStory, recentPosts }) {
         <title>{story ? story.name : "My Site"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {story.content && <StoryblokComponent blok={story.content} />}
-      <PostListFeatured posts={recentPosts.stories} />
+      {/* {story.content && <StoryblokComponent blok={story.content} />} */}
+      <main className="main bg-themeFill-offWhite">
+        <div className="newsWrapper pt-20">
+          <PostListFeatured posts={recentPosts.stories} />
+        </div>
+      </main>
     </>
   )
 }
@@ -32,12 +36,12 @@ export async function getStaticProps({ preview = false }) {
   })
   let { data: recentPostsData } = await storyblokApi.get(`cdn/stories/`, {
     starts_with: "news",
-    per_page: "3",
+    per_page: "20",
   })
 
   return {
     props: {
-      story: data ? data.story : false,
+      // story: data ? data.story : false,
       preview,
       recentPosts: recentPostsData,
     },
