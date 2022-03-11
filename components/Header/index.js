@@ -311,7 +311,7 @@ const aboutUs = [
   },
   {
     name: "Our Leadership",
-    description: "Need a subtitle for this menu item",
+    description: "Meet some of the team at Marianna's!",
     href: "/our-leadership",
     icon: UsersIcon,
   },
