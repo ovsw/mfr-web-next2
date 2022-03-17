@@ -29,6 +29,7 @@ const Section = ({ blok: section }) => {
   const padding_top = section.padding_top || "default"
   const margin_bottom = section.margin_bottom || "default"
   const padding_bottom = section.padding_bottom || "default"
+  const overflowHidden = section.overflow_hidden
 
   // main styles
   const bgStyles = {
@@ -118,7 +119,9 @@ const Section = ({ blok: section }) => {
   return (
     <SectionThemeContext.Provider value={themeContextValues}>
       <section
-        className={`SECTION px-4 lg:px-8 2xl:px-0 overflow-x-hidden
+        className={`SECTION px-4 lg:px-8 2xl:px-0 
+
+        ${overflowHidden ? "overflow-x-hidden" : ""}
         ${bgStyles[background]} 
 
         ${topMarginStyles[margin_top]} 
