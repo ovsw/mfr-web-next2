@@ -49,7 +49,7 @@ const Hoagie = ({ blok: hoagie }) => {
                 with Marianna's{" "}
                 <span className="text-accent-500">
                   {dressing == "italian"
-                    ? "Italian Dressinng"
+                    ? "Italian Dressing"
                     : "Sweet & Sassy Mayo"}
                 </span>
               </p>
