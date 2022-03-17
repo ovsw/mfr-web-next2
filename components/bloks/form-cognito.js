@@ -5,14 +5,15 @@ const Form = ({ blok: cognitoForm }) => {
   return (
     <div className="cognito">
       <Script
-        src="https://www.cognitoforms.com/s/xPoircp7HEGoNo_tpFEirg"
+        src="https://www.cognitoforms.com/f/iframe.js"
         strategy="beforeInteractive"
       />
-      <Script id="cognito-custom-ovi" strategy="lazyOnload">
-        {`Cognito.load("forms", { id: "${cognitoForm.cognito_form_id}" });`}
-      </Script>
+      <iframe
+        src={`https://www.cognitoforms.com/f/xPoircp7HEGoNo_tpFEirg/${cognitoForm.cognito_form_id}`}
+        style={{ border: "0", width: "100%" }}
+        height="auto"
+      />
     </div>
   )
 }
-
 export default Form
