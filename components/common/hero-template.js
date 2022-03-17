@@ -20,7 +20,7 @@ const HeroTemplate = ({
 
   const heightStyles = {
     short: "py-16 sm:py-24 lg:py-40",
-    default: "py-16 sm:py-24 lg:py-64",
+    default: "py-16 sm:py-24 lg:pb-64 lg:pt-32",
     tall: "py-16 sm:py-24 lg:py-80",
     empty: "py-32 sm:py-36 md:py-60 xl:py-[35vh] 3xl:py-[30vh]",
   }
@@ -53,14 +53,14 @@ const HeroTemplate = ({
                 focus={background_image?.focus}
                 className=""
               />
-              <div className="absolute inset-0  mix-blend-multiply bg-gradient-to-r from-gray-500 via-gray-100 to-transparent sm:from-gray-100 sm:via-gray-100 sm:to-gray-100" />
+              <div className="absolute inset-0  mix-blend-multiply bg-gradient-to-r from-gray-900 via-gray-500 to-transparent sm:from-gray-100 sm:via-gray-100 sm:to-gray-100" />
             </div>
           )}
           {/* END IMAGE */}
           <div className="max-w-7xl mx-auto ">
             <div className="relative sm:overflow-hidden">
               <div
-                className={`relative px-4 sm:px-6 lg:px-8 text-white ${heightStyles[height]}`}
+                className={`relative px-4 sm:px-12 lg:px-12 text-white ${heightStyles[height]}`}
               >
                 {children}
               </div>
