@@ -69,11 +69,11 @@ const Row = ({ blok: rowBigImage }) => {
 
       {/* IMAGE */}
       <div
-        className={`lg:absolute  lg:top-0 h-full ${alternateImageStyles} lg:w-1/2 `}
+        className={` pt-20 lg:pt-0 lg:absolute  lg:top-0 h-full ${alternateImageStyles} lg:w-1/2 `}
       >
         <div
-          className={`w-full object-fit lg:absolute lg:h-full 
-          aspect-square group transition ease-in-out ${
+          className={`w-full object-fit relative lg:absolute lg:h-full 
+          aspect-square group transition ease-in-out  transform-gpu ${
             id && "hover:scale-105"
           }`}
         >
