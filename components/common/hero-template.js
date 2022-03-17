@@ -20,7 +20,7 @@ const HeroTemplate = ({
 
   const heightStyles = {
     short: "py-16 sm:py-24 lg:py-40",
-    default: "py-16 sm:py-24 lg:pb-64 lg:pt-32",
+    default: "py-16 sm:py-24 lg:py-64",
     tall: "py-16 sm:py-24 lg:py-80",
     empty: "py-32 sm:py-36 md:py-60 xl:py-[35vh] 3xl:py-[30vh]",
   }
