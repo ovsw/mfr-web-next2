@@ -28,7 +28,6 @@ const RowMenuTeaserOneOff = ({ blok: rowMenuTeaserOneOff }) => {
 
       {/* ROW WRAPPER */}
       <div className="relative full-width pt-14 lg:pt-32">
-
         {/* HOAGIE IMAGE */}
         <div
           className="
@@ -80,8 +79,6 @@ const RowMenuTeaserOneOff = ({ blok: rowMenuTeaserOneOff }) => {
           </div>
         </div>
         {/* END CONTENT */}
-
-        
       </div>
 
       {/* ************* */}
@@ -99,7 +96,6 @@ const RowMenuTeaserOneOff = ({ blok: rowMenuTeaserOneOff }) => {
           lg:py-40 
         "
         >
-
           {/* PIZZA IMAGE COLUMN*/}
           <div
             className="
@@ -146,8 +142,6 @@ const RowMenuTeaserOneOff = ({ blok: rowMenuTeaserOneOff }) => {
               {blockIterator(content_2)}
             </div>
           </div>
-
-          
         </div>
         {/* END CONTENT */}
       </div>
