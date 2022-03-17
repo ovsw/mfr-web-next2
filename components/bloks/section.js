@@ -118,7 +118,7 @@ const Section = ({ blok: section }) => {
   return (
     <SectionThemeContext.Provider value={themeContextValues}>
       <section
-        className={`SECTION px-4 lg:px-8 2xl:px-0
+        className={`SECTION px-4 lg:px-8 2xl:px-0 overflow-x-hidden
         ${bgStyles[background]} 
 
         ${topMarginStyles[margin_top]} 
