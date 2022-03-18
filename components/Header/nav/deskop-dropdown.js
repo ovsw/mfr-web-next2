@@ -40,12 +40,12 @@ const DesktopDropdown = ({ title, items, description }) => {
             <Popover.Panel
               className="absolute z-10 -ml-4 lg:ml-0 mt-3 top-10 
               transform w-screen 
-              max-w-md lg:max-w-4xl
-              lg:left-1/2 lg:-translate-x-1/2"
+              max-w-sm lg:max-w-xl xl:max-w-4xl
+              md:left-1/2 md:-translate-x-1/2"
             >
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="flex">
-                  <div className="py-14 pl-6 pr-4 bg-tertiary-300  min-w-max">
+                  <div className="py-14 pl-6 pr-4 bg-tertiary-300  min-w-max hidden xl:block">
                     <p className="text-3xl text-stone-600 font-bold">{title}</p>
                     <p className="text-base mt-2 text-stone-500 max-w-[200px] font-medium">
                       {description}

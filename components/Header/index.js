@@ -1,36 +1,29 @@
-import { Fragment } from "react"
-import { Popover, Transition } from "@headlessui/react"
+import { Popover } from "@headlessui/react"
 import {
-  AnnotationIcon,
   BookOpenIcon,
   CalendarIcon,
   ChartBarIcon,
-  ChatAlt2Icon,
   ChatAltIcon,
   ClipboardCheckIcon,
   CurrencyDollarIcon,
   DocumentAddIcon,
   DocumentTextIcon,
   HeartIcon,
-  InboxIcon,
   MenuIcon,
   NewspaperIcon,
-  PencilAltIcon,
   PhoneIcon,
   QuestionMarkCircleIcon,
-  ReplyIcon,
   SparklesIcon,
-  TrashIcon,
   UsersIcon,
   StarIcon,
   TemplateIcon,
   UserGroupIcon,
-  XIcon,
 } from "@heroicons/react/outline"
 import Link from "next/link"
 import Image from "next/image"
 
 import DesktopDropdown from "./nav/deskop-dropdown"
+import MobileNav from "./nav/mobile"
 
 import DesktopLogo from "../../public/images/mariannas-fundraisers_2022_alt_wordmark.png"
 
@@ -49,9 +42,9 @@ const Header = ({ props }) => {
                 open ? "opacity-30 fixed inset-0" : "opacity-0"
               } bg-black`}
             /> */}
-            <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4 md:py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+            <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4 md:py-6 sm:px-6  md:space-x-10  lg:px-8">
               {/* LOGO */}
-              <div className="flex justify-start lg:w-0 lg:flex-1">
+              <div className="flex justify-start lg:w-36">
                 <Link href="/">
                   <a className="w-40 pt-2 md:pt-0 md:h-10 relative">
                     <span className="sr-only">Marianna's Fundraisers</span>
@@ -66,17 +59,11 @@ const Header = ({ props }) => {
               </div>
               {/* LOGO END */}
 
-              {/* MOBILE TRIGGER */}
-              <div className="-mr-2 -my-2 md:hidden">
-                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-stone-400 hover:text-stone-500 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
-                  <span className="sr-only">Open menu</span>
-                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                </Popover.Button>
-              </div>
-              {/* END MOBILE TRIGGER */}
-
               {/* DESKTOP NAV */}
-              <Popover.Group as="nav" className="hidden md:flex space-x-10">
+              <Popover.Group
+                as="nav"
+                className="hidden lg:flex space-x-5 xl:space-x-10"
+              >
                 <DesktopDropdown
                   title="Fundraisers"
                   items={fundraisers}
@@ -103,18 +90,12 @@ const Header = ({ props }) => {
                 </Link>
               </Popover.Group>
 
-              <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                {/* <a
-              href="#"
-              className="whitespace-nowrap text-base font-medium text-stone-500 hover:text-stone-900"
-            >
-              Sign in
-            </a> */}
+              <div className="hidden md:flex  lg:flex-1 justify-end ">
                 <Link href="/schedule-a-free-tasting">
                   <a
                     className="
-              ml-8 whitespace-nowrap 
-              inline-flex items-center justify-center 
+              whitespace-nowrap 
+              flex items-center justify-center 
               btn btn-outlined-accent
               btn-small
               "
@@ -123,119 +104,21 @@ const Header = ({ props }) => {
                   </a>
                 </Link>
               </div>
+
+              {/* MOBILE TRIGGER */}
+              <div className="-mr-2 -my-2 lg:hidden">
+                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-primary-500 hover:text-stone-500 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
+                  <span className="sr-only">Open menu</span>
+                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                </Popover.Button>
+              </div>
+              {/* END MOBILE TRIGGER */}
             </div>
             {/* END DESKTOP NAV */}
-
-            {/* MOBILE MENU  */}
-            <Transition
-              as={Fragment}
-              enter="duration-200 ease-out"
-              enterFrom="opacity-0 scale-95"
-              enterTo="opacity-100 scale-100"
-              leave="duration-100 ease-in"
-              leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
-            >
-              <Popover.Panel
-                focus
-                className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-              >
-                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-                  {/* MOBILE MENU MAIN */}
-                  <div className="pt-5 pb-6 px-5">
-                    {/* MOBILE MENU TOP */}
-                    <div className="flex items-center justify-between">
-                      <Link href="/">
-                        <a className="w-24">
-                          <Image
-                            src={DesktopLogo}
-                            alt="Marianna's Fundraisers Logo"
-                          />
-                        </a>
-                      </Link>
-
-                      <div className="-mr-2">
-                        <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-stone-400 hover:text-stone-500 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent">
-                          <span className="sr-only">Close menu</span>
-                          <XIcon className="h-6 w-6" aria-hidden="true" />
-                        </Popover.Button>
-                      </div>
-                    </div>
-                    {/*END MOBILE MENU TOP*/}
-
-                    {/* fundraisers NAV ITEM SUBITEMS ONLY */}
-                    <div className="mt-6">
-                      <nav className="grid grid-cols-1 gap-7">
-                        {mobileMainMenu.map(item => (
-                          <Link key={item.name} href={item.href}>
-                            <a className="-m-3 p-3 flex items-center rounded-lg hover:bg-stone-50">
-                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-red-600 to-accent text-white">
-                                <item.icon
-                                  className="h-6 w-6"
-                                  aria-hidden="true"
-                                />
-                              </div>
-                              <div className="ml-4 text-base font-medium text-stone-900">
-                                {item.name}
-                              </div>
-                            </a>
-                          </Link>
-                        ))}
-                      </nav>
-                    </div>
-                    {/* SOLUTIONS NAV ITEM SUBITEMS ONLY */}
-                  </div>
-                  {/* END MOBILE MENU MAIN */}
-
-                  {/* MOBILE MENU EXTRA ITEMS */}
-                  <div className="py-6 px-5">
-                    {/* EXTRA ITEMS MAIN */}
-                    <div className="grid grid-cols-2 gap-4">
-                      {mobileSecondaryMenu.map((item, i) => {
-                        return (
-                          <Link key={i} href={item.href}>
-                            <a className="text-base font-medium text-stone-900 hover:text-stone-700">
-                              {item.name}
-                            </a>
-                          </Link>
-                        )
-                      })}
-                    </div>
-                    {/* END EXTRA ITEMS MAIN */}
-
-                    {/* EXTRA ITEMS BUTTONS  */}
-                    <div className="mt-6">
-                      <Link href="/schedule-a-free-tasting">
-                        <a className="btn btn-accent btn-small">
-                          <span className="mr-2">
-                            <CalendarIcon
-                              className="h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          </span>
-                          Book Free Tasting
-                        </a>
-                      </Link>
-                      <p className="mt-4 text-center text-base font-medium text-stone-500">
-                        {/* Existing customer? */}
-                        <Link href="/get-support">
-                          <a className="btn btn-outlined-primary btn-small">
-                            <span className="mr-2">
-                              <PhoneIcon
-                                className="h-5 w-5"
-                                aria-hidden="true"
-                              />
-                            </span>{" "}
-                            <span className="">Get Support / Contact</span>
-                          </a>
-                        </Link>
-                      </p>
-                    </div>
-                    {/* END EXTRA ITEMS BUTTONS  */}
-                  </div>
-                </div>
-              </Popover.Panel>
-            </Transition>
+            <MobileNav
+              mobileMainMenu={mobileMainMenu}
+              mobileSecondaryMenu={mobileSecondaryMenu}
+            />
           </>
         )}
       </Popover>
@@ -394,8 +277,8 @@ const mobileMainMenu = [
 const mobileSecondaryMenu = [
   tools[3],
   aboutUs[1],
-  aboutUs[4],
-  aboutUs[5],
   aboutUs[0],
-  fundraisers[3],
+  // aboutUs[4],
+  aboutUs[5],
+  // fundraisers[3],
 ]
