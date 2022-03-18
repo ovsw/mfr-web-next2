@@ -27,6 +27,7 @@ import ButtonGroup from "../components/bloks/button-group"
 import HeadingGroup from "../components/bloks/heading-group"
 import Image from "../components/bloks/image"
 import Hero from "../components/bloks/hero"
+import HeroProduct from "../components/bloks/hero-product"
 import RowTwoColumnsCta from "../components/bloks/row-two-columns-cta"
 import RowBigImage from "../components/bloks/row-big-image"
 import RowTestimonials from "../components/bloks/row-testimonials"
@@ -85,6 +86,7 @@ storyblokInit({
     table: CustomTable,
     form_cognito: FormCognito,
     "page-heading": PageHeading,
+    "hero-product": HeroProduct,
   },
 })
 

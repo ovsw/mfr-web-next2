@@ -114,6 +114,7 @@ module.exports = {
         },
         tertiary: {
           DEFAULT: "#FEF7C1",
+          0: "#FAF7EA",
           50: "#FFFFFF",
           100: "#FFFFFD",
           200: "#FFFDEE",
