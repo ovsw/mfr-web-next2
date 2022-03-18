@@ -30,6 +30,7 @@ const Row = ({ blok: rowBigImage }) => {
     extra_padding,
     contain_image,
     youTubeLink = "",
+    badge_image,
   } = rowBigImage
 
   const alternateContentWrapperStyles = is_reversed
@@ -69,13 +70,16 @@ const Row = ({ blok: rowBigImage }) => {
 
       {/* IMAGE */}
       <div
-        className={` pt-20 lg:pt-0 lg:absolute  lg:top-0 h-full ${alternateImageStyles} lg:w-1/2 `}
+        className={` ${
+          !badge_image && "pt-20"
+        } lg:pt-0 lg:absolute  lg:top-0 h-full ${alternateImageStyles} lg:w-1/2 `}
       >
         <div
           className={`w-full object-fit relative lg:absolute lg:h-full 
-          aspect-square group transition ease-in-out  transform-gpu ${
-            id && "hover:scale-105"
-          }`}
+          aspect-square group transition ease-in-out  transform-gpu 
+          ${id && "hover:scale-105"}
+          ${badge_image && "h-80 md:h-96"}
+          `}
         >
           <Image
             className="rounded-2xl"
