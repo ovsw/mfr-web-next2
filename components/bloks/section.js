@@ -121,7 +121,7 @@ const Section = ({ blok: section }) => {
       <section
         className={`SECTION px-4 lg:px-8 2xl:px-0 
 
-        ${overflowHidden ? "overflow-x-hidden" : ""}
+        ${overflowHidden ? "overflow-hidden" : ""}
         ${bgStyles[background]} 
 
         ${topMarginStyles[margin_top]} 
