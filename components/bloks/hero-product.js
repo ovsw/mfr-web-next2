@@ -23,7 +23,7 @@ const Hero = ({ blok: hero }) => {
   } = hero
 
   return (
-    <div className="relative bg-themeFill-offWhite overflow-hidden lg:flex overflow-hidden">
+    <div className="relative bg-themeFill-offWhite overflow-hidden lg:flex">
       {/* CONTENT */}
       <div className="max-w-7xl mx-auto 2xl:mx-0 xl:pt-20 xl:pb-16 lg:flex items-center">
         <div className="relative z-10 pb-8 bg-themeFill-offWhite sm:pb-16 md:pb-20 lg:max-w-xl lg:w-full lg:pb-28 xl:pb-32 2xl:max-w-2xl">
