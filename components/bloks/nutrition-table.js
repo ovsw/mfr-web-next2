@@ -136,7 +136,7 @@ const NutritionTable = ({ blok: nutritionTable }) => {
 
             <tr className="border-b-[13px] border-stone-900">
               <td>
-                <strong>Protein</strong> {protein}mg
+                <strong>Protein</strong> {protein}g
               </td>
               <td>
                 <span className="sr-only">no recommended daily value</span>
@@ -145,7 +145,7 @@ const NutritionTable = ({ blok: nutritionTable }) => {
 
             <tr>
               <td>Vitamin D {vit_d}mcg</td>
-              <td className="text-right">{saturated_fat_per}%</td>
+              <td className="text-right">{vit_d_per}%</td>
             </tr>
 
             <tr>
