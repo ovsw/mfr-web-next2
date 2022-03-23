@@ -18,7 +18,10 @@ const Hero = ({ blok: hero }) => {
     title,
     border_color,
     background_color,
+    hidden = false,
   } = hero
+
+  if (hidden) return <></>
 
   return (
     <>

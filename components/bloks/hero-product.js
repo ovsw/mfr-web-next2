@@ -5,7 +5,6 @@
 // - background_image: Asset (image)
 // - height: string
 
-import HeroTemplate from "../common/hero-template"
 import RichTextRenderer from "../richTextRenderer"
 import { blockIterator } from "../../utils/blockIterator"
 import { Image } from "@storyofams/storyblok-toolkit"
@@ -48,14 +47,14 @@ const Hero = ({ blok: hero }) => {
         </div>
       </div>
       {/* IMAGE */}
-      <div className=" mt-10 lg:inset-y-0 lg:right-0 lg:w-2/3   z-30 relative lg:min-h-[44rem]">
+      <div className="lg:inset-y-0 lg:right-0 lg:w-2/3   z-30 relative lg:min-h-[44rem]">
         <div
           className="
-          h-80 w-full sm:h-72 md:h-[50rem] 
-          lg:absolute lg:left-0 lg:top-0 lg:bottom-auto
+          h-80 w-full sm:h-72 md:h-96 
+          lg:absolute lg:left-0 lg:-bottom-20 lg:top-auto
           lg:w-[1800px] lg:h-auto
            object-contain
-          lg:pt-20 
+          
          "
         >
           <Image
@@ -69,13 +68,13 @@ const Hero = ({ blok: hero }) => {
           />
         </div>
       </div>
-      <div className="hidden md:flex justify-center items-center w-full mt-10 relative bottom-56 z-30 lg:hidden">
+      {/* <div className="hidden md:flex justify-center items-center w-full mt-10 relative bottom-56 z-30 lg:hidden">
         <div className="pb-4 text-primary text-lg">more</div>
         <div className="scroll-down-chevron"></div>
         <div className="scroll-down-chevron"></div>
         <div className="scroll-down-chevron"></div>
         <div className="scroll-down-chevron"></div>
-      </div>
+      </div> */}
     </div>
   )
 }
