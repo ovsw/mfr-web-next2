@@ -130,7 +130,7 @@ const NutritionTable = ({ blok: nutritionTable }) => {
             </tr>
 
             <tr>
-              <td className="pl-5">includes {added_sugars}g added sugars</td>
+              <td className="pl-5">Includes {added_sugars}g Added Sugars</td>
               <td className="text-right">{added_sugars_per}%</td>
             </tr>
 
@@ -159,7 +159,7 @@ const NutritionTable = ({ blok: nutritionTable }) => {
             </tr>
 
             <tr className="border-b-8 border-stone-900">
-              <td>Potasium {potassium}mg</td>
+              <td>Potassium {potassium}mg</td>
               <td className="text-right">{potassium_per}%</td>
             </tr>
           </tbody>
