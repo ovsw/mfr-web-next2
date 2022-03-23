@@ -45,9 +45,9 @@ const DesktopDropdown = ({ title, items, description }) => {
             >
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="flex">
-                  <div className="py-14 pl-6 pr-4 bg-tertiary-300  min-w-max hidden xl:block">
-                    <p className="text-3xl text-stone-600 font-bold">{title}</p>
-                    <p className="text-base mt-2 text-stone-500 max-w-[200px] font-medium">
+                  <div className="py-14 pl-6 pr-4 bg-primary  min-w-max hidden xl:block">
+                    <p className="text-3xl text-stone-100 font-bold">{title}</p>
+                    <p className="text-base mt-2 text-stone-300 max-w-[200px] font-medium">
                       {description}
                     </p>
                   </div>
