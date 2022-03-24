@@ -24,18 +24,14 @@ const Hero = ({ blok: hero }) => {
   return (
     <div className="relative bg-black overflow-hidden lg:flex">
       {/* CONTENT */}
-      <div className="max-w-[1000px] mx-auto 2xl:mx-0 xl:pt-14 xl:pb-14 lg:flex items-center bg-dark-table-md lg:bg-dark-table">
-        <div
-          className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32
-          
-        "
-        >
-          <div className="relative pt-6 px-4 sm:px-6 lg:px-8"></div>
+      <div className=" mx-auto 2xl:mx-0   lg:flex items-center bg-dark-table-md lg:bg-dark-table">
+        <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:w-full lg:pb-0">
+          {/* <div className="relative pt-6 px-4 sm:px-6 lg:px-8"></div> */}
 
-          <div className="relative mt-10 z-20 mx-auto  px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 xl:pl-20 xl:px-20">
+          <div className="relative mt-10 z-20 mx-auto  px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-0 lg:px-0 lg:pl-20  xl:pl-16 max-w-xl">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-100 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">{title}</span>{" "}
+                {title}
                 {/* <span className="block text-indigo-600 xl:inline">
                   online business
                 </span> */}
@@ -56,16 +52,15 @@ const Hero = ({ blok: hero }) => {
           className="
            w-full  
           lg:absolutes lg:left-0 lg:-bottom-0 lg:top-0 
-          lg:w-[1800px] 
+          lg:w-[1400px] xl:w-[1800px] 
          "
         >
           <Image
             src={background_image?.filename}
             alt={background_image?.alt}
-            fluid={2047}
+            fluid={1600}
             focus={background_image?.focus}
             fit="contain"
-            className=""
           />
         </div>
       </div>
