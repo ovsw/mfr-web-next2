@@ -11,7 +11,7 @@ function PostListFeatured({ posts }) {
         <div>
           <h2>
             <span className="eyebrow block">Marianna's</span>
-            <span className="block text-6xl font-bold">News & Tips</span>
+            <span className="block text-6xl font-bold">News & Events</span>
           </h2>
         </div>
 
