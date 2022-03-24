@@ -4,8 +4,8 @@
 //  main_image: Asset (Image)
 //  title: text
 
-import readingTime from "reading-time"
-import { getPlainText } from "@storyofams/storyblok-toolkit"
+// import readingTime from "reading-time"
+// import { getPlainText } from "@storyofams/storyblok-toolkit"
 
 import { blogAuthors } from "../utils/blogAuthors"
 import { blockIterator } from "../utils/blockIterator"
@@ -13,7 +13,7 @@ import { blockIterator } from "../utils/blockIterator"
 const Page = ({ blok }) => {
   // console.log("blog post blok", blok)
 
-  const { title, date: postDate, date, body, main_image, author } = blok
+  const { title, date: postDate, date, body, author, reading_time } = blok
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
@@ -21,8 +21,8 @@ const Page = ({ blok }) => {
     year: "numeric",
   })
 
-  const stats = readingTime(getPlainText(body))
-  const minutesToRead = Math.ceil(stats.minutes)
+  // const stats = readingTime(getPlainText(body))
+  // const minutesToRead = Math.ceil(stats.minutes)
 
   return (
     <main className="main">
@@ -51,7 +51,7 @@ const Page = ({ blok }) => {
               <div className="flex space-x-1 text-gray-500">
                 <time dateTime={date}>{formattedDate}</time>
                 <span aria-hidden="true">&middot;</span>&nbsp;
-                {minutesToRead} min read
+                {reading_time} min read
                 {/* <span>{post.readingTime} read</span> */}
               </div>
             </div>

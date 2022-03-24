@@ -1,6 +1,6 @@
 import * as React from "react"
-import { Image, getPlainText } from "@storyofams/storyblok-toolkit"
-import readingTime from "reading-time"
+import { Image } from "@storyofams/storyblok-toolkit"
+// import readingTime from "reading-time"
 
 import { blogAuthors } from "../utils/blogAuthors"
 
@@ -19,7 +19,7 @@ function PostListFeatured({ posts }) {
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
           {posts.map(post => {
             const { name, content, full_slug, uuid } = post
-            const { body, date, main_image, excerpt, author } = content
+            const { date, main_image, excerpt, author, reading_time } = content
 
             const formattedDate = new Date(date).toLocaleDateString("en-US", {
               day: "numeric",
@@ -27,8 +27,8 @@ function PostListFeatured({ posts }) {
               year: "numeric",
             })
 
-            const stats = readingTime(getPlainText(body))
-            const minutesToRead = Math.ceil(stats.minutes)
+            // const stats = readingTime(getPlainText(body))
+            // const minutesToRead = Math.ceil(stats.minutes)
 
             return (
               <div
@@ -88,7 +88,7 @@ function PostListFeatured({ posts }) {
                       <div className="flex space-x-1 text-sm text-gray-500">
                         <time dateTime={date}>{formattedDate}</time>
                         <span aria-hidden="true">&middot;</span>&nbsp;
-                        {minutesToRead} min read
+                        {reading_time} min read
                         {/* <span>{post.readingTime} read</span> */}
                       </div>
                     </div>
