@@ -19,11 +19,16 @@ const Hoagie = ({ blok: hoagie }) => {
   const imageStyles = reversed ? "right-0" : "left-0"
 
   return (
-    <li className="relative full-width">
+    <li className="relative full-width mt-20 md:mt-24">
       {/* IMAGE */}
       <div className={`lg:absolute lg:top-20 ${imageWrapperStyles} lg:w-1/2`}>
         <div
-          className={`lg:absolute ${imageStyles} w-[1200px] max-w-[100vw] px-10 lg:px-0`}
+          className={`lg:absolute ${imageStyles}
+          -ml-40 -mr-32 -rotate-3
+          md:ml-10 
+          lg:rotate-0
+          xl:ml-0
+          lg:w-[1200px] lg:max-w-[100vw]  lg:px-0`}
         >
           <Image
             className=""
@@ -38,7 +43,7 @@ const Hoagie = ({ blok: hoagie }) => {
       {/* END IMAGE */}
 
       {/* CONTENT */}
-      <div className="contentGrid relative pt-12 pb-16 px-4 sm:pt-32 sm:px-6 lg:px-10 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2 lg:min-h-[400px]">
+      <div className="contentGrid relative  pb-16 px-4 sm:pt-5 sm:px-6 lg:px-10 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2 lg:min-h-[400px]">
         <div className={`${contentStyles} lg:flex lg:items-center lg:pb-12`}>
           <div className="text-base max-w-prose lg:max-w-lg px-6 lg:px-0 space-y-8">
             <div>
