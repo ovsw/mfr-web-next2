@@ -180,6 +180,22 @@
     background: url("/images/bg/bg-muslin-dark-cold.jpg") center center;
     background-size: cover;
   }
+  .bg-dark-table-md {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 85%,
+        rgba(255, 255, 255, 0)
+      ),
+      url("/images/bg/dark-product-hero-bg-wall.jpg");
+    background-position: bottom left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .bg-dark-table {
+    background: url("/images/bg/dark-product-hero-bg.jpg") bottom right;
+    background-size: cover;
+  }
 
   .custom-underline {
     @apply relative    

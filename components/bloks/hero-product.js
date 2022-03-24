@@ -22,21 +22,25 @@ const Hero = ({ blok: hero }) => {
   } = hero
 
   return (
-    <div className="relative bg-themeFill-offWhite overflow-hidden lg:flex">
+    <div className="relative bg-black overflow-hidden lg:flex">
       {/* CONTENT */}
-      <div className="max-w-7xl mx-auto 2xl:mx-0 xl:pt-20 xl:pb-16 lg:flex items-center">
-        <div className="relative z-10 pb-8 bg-themeFill-offWhite sm:pb-16 md:pb-20 lg:max-w-xl lg:w-full lg:pb-28 xl:pb-32 2xl:max-w-2xl">
+      <div className="max-w-[1000px] mx-auto 2xl:mx-0 xl:pt-14 xl:pb-14 lg:flex items-center bg-dark-table-md lg:bg-dark-table">
+        <div
+          className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32
+          
+        "
+        >
           <div className="relative pt-6 px-4 sm:px-6 lg:px-8"></div>
 
-          <div className="relative mt-10 z-20 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 xl:pl-20">
+          <div className="relative mt-10 z-20 mx-auto  px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 xl:pl-20 xl:px-20">
             <div className="sm:text-center lg:text-left">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              <h1 className="text-4xl tracking-tight font-extrabold text-gray-100 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">{title}</span>{" "}
                 {/* <span className="block text-indigo-600 xl:inline">
                   online business
                 </span> */}
               </h1>
-              <div className="mt-8 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-10 md:text-xl lg:mx-0">
+              <div className="mt-8 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-10 md:text-xl lg:mx-0">
                 <RichTextRenderer data={text} />
               </div>
               <div className="mt-8 sm:mt-10 md:mt-10 sm:flex sm:justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-5">
@@ -47,24 +51,21 @@ const Hero = ({ blok: hero }) => {
         </div>
       </div>
       {/* IMAGE */}
-      <div className="lg:inset-y-0 lg:right-0 lg:w-2/3   z-30 relative lg:min-h-[44rem]">
+      <div className="lg:inset-y-0 lg:right-0 lg:w-[69%]   z-30 relative ">
         <div
           className="
-          h-80 w-full sm:h-72 md:h-96 
-          lg:absolute lg:left-0 lg:-bottom-20 lg:top-auto
-          lg:w-[1800px] lg:h-auto
-           object-contain
-          
+           w-full  
+          lg:absolutes lg:left-0 lg:-bottom-0 lg:top-0 
+          lg:w-[1800px] 
          "
         >
           <Image
             src={background_image?.filename}
             alt={background_image?.alt}
-            height="100%"
-            width="100%"
-            fluid={1800}
+            fluid={2047}
             focus={background_image?.focus}
-            className="object-contain"
+            fit="contain"
+            className=""
           />
         </div>
       </div>
