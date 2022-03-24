@@ -82,7 +82,7 @@ const Header = ({ props }) => {
                 <DesktopDropdown
                   title="Selling Tools"
                   items={tools}
-                  description="We have a variety of tools to help make your fundraising experience a little easier."
+                  description="Tools to help you throughout the fundraising process."
                 />
 
                 <Link href="/contact-us">
