@@ -20,7 +20,7 @@ const HeroTemplate = ({
 
   const heightStyles = {
     short: "py-16 sm:py-24 lg:py-40",
-    default: "py-16 sm:py-24 lg:py-64",
+    default: "py-16 sm:py-24 lg:py-36 xl:py-44 2xl:py-60",
     tall: "py-16 sm:py-24 lg:py-80",
     empty: "py-32 sm:py-36 md:py-60 xl:py-[35vh] 3xl:py-[30vh]",
   }
@@ -58,10 +58,8 @@ const HeroTemplate = ({
           )}
           {/* END IMAGE */}
           <div className="max-w-7xl mx-auto ">
-            <div className="relative sm:overflow-hidden">
-              <div
-                className={`relative px-4 sm:px-12 lg:px-12 text-white ${heightStyles[height]}`}
-              >
+            <div className="relative sm:overflow-hidden  ">
+              <div className={`relative  text-white ${heightStyles[height]}`}>
                 {children}
               </div>
             </div>

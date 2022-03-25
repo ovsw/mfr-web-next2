@@ -35,12 +35,22 @@ const Hero = ({ blok: hero }) => {
         background_color={background_color}
       >
         <h1 className="text-left text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl max-w-sm md:max-w-none ">
-          <span className="block text-white lg:max-w-xl tracking-wide">
+          <span
+            className="block text-white
+           max-w-[7em] sm:max-w-[7em] lg:max-w-md xl:max-w-xl
+           "
+          >
             {title}
           </span>
           {/* <span className="block text-green-200">customer support</span> */}
         </h1>
-        <div className="mt-6  text-left text-xl text-stone-400 leading-relaxed tracking-wide max-w-sm md:max-w-lg">
+        <div
+          className="mt-6  text-left  text-stone-400 leading-relaxed md:max-w-lg
+          text-xl
+          max-w-[5em]
+          hidden lg:block
+        "
+        >
           <RichTextRenderer data={text} />
         </div>
 
