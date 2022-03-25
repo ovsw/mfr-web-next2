@@ -56,7 +56,7 @@ const RowThreeSteps = ({ blok: row }) => {
       </div>
 
       {/* dotted path */}
-      <DottedPathSteps className="hidden md:block w-full absolute top-60 h-32" />
+      <DottedPathSteps className="hidden md:block w-full absolute top-40 xl:top-52 h-32 xl:left-0" />
     </div>
   )
 }
