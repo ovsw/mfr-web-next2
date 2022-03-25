@@ -4,46 +4,93 @@
 // bloks: content, heading
 // asset: "image"
 
-// import * as React from "react"
+import { useState } from "react"
 import { blockIterator } from "../../utils/blockIterator"
 import { Image } from "@storyofams/storyblok-toolkit"
+
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination, Navigation } from "swiper"
 
 // svgs
 import ChevronLeftRound from "../svg/chevron-left-round"
 import ChevronRightRound from "../svg/chevron-right-round"
 
+import "swiper/css"
+// import "swiper/css/pagination"
+// import "swiper/css/navigation"
+// import "swiper/css/a11y"
+
 export default function TestimonialsRow({ blok: rowTestimonials }) {
   const { heading, testimonials_list, image } = rowTestimonials
 
-  // console.log("testimonials_list", testimonials_list);
+  const [swiper, setSwiper] = useState(undefined)
+  const [swiperIndex, setSwiperIndex] = useState(0)
+
+  swiper?.on("slideChange", function () {
+    setSwiperIndex(swiper.activeIndex)
+    // console.log("slide changed", swiper.activeIndex)
+  })
+
+  const isOnFirstSlide = swiperIndex == 0
+  const isOnLastSlide = swiperIndex == testimonials_list.length - 1
+  // console.log("swiper instance", isOnFirstSlide, isOnLastSlide)
+
+  const prevButtonStyles = isOnFirstSlide
+    ? "opacity-100 text-gray-500"
+    : "opacity-100 text-tertiary-600"
+  const nextButtonStyles = isOnLastSlide
+    ? "opacity-80 text-gray-500"
+    : "opacity-100 text-tertiary-600"
+
+  // console.log("testimonials_list", testimonials_list)
   return (
     <div className="container mx-auto pt-10 sm:pt-20">
       <div className="flex">
         <div className="max-w-lg">{heading && blockIterator(heading)}</div>
         <div className="flex gap-4 items-center ml-10 pb-1">
-          <ChevronLeftRound />
-          <ChevronRightRound />
+          <button onClick={() => swiper.slidePrev()} className="cursor-pointer">
+            <span className="sr-only">previous testimonial</span>
+            <ChevronLeftRound className={prevButtonStyles} />
+          </button>
+          <button
+            onClick={() => swiper.slideNext()}
+            className={nextButtonStyles}
+          >
+            <span className="sr-only">next testimonial</span>
+            <ChevronRightRound />
+          </button>
         </div>
       </div>
 
       <div className="grid lg:grid-cols-2 ">
         <div className="" key={testimonials_list[1]._uid}>
-          <div className="w-full relative flex flex-col   p-6 ">
-            <div className="flex flex-col text-white">
-              <QuoteSvg />
-              <p className="xl:max-w-xl text-xl mt-4 italic text-white">
-                {testimonials_list[0].text}
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col  px-12 py-10 pt-0 text-stone-300 tracking-wider">
-            <p className="text-base font-semibold leading-4 my-2">
-              {testimonials_list[1].author_name}
-            </p>
-            <p className="text-base leading-4 ">
-              {testimonials_list[1].author_info}
-            </p>
-          </div>
+          <Swiper
+            slidesPerView={1}
+            modules={[Pagination]}
+            className="mySwiper"
+            onSwiper={setSwiper}
+          >
+            {testimonials_list.map(item => {
+              return (
+                <SwiperSlide key={item._uid}>
+                  <div className="w-full relative flex flex-col   p-6 ">
+                    <div className="flex flex-col text-white">
+                      <QuoteSvg />
+                      <p className="xl:max-w-xl text-xl mt-4 italic text-white">
+                        {item.text}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col  px-6 py-10 pt-0 text-stone-300 tracking-wider">
+                    <p className="text-base font-semibold leading-4 my-2 text-tertiary-600">
+                      {item.author_name}
+                    </p>
+                    <p className="text-base leading-4">{item.author_info}</p>
+                  </div>
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
         </div>
 
         {/* IMAGE */}
