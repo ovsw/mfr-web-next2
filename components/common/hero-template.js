@@ -21,8 +21,8 @@ const HeroTemplate = ({
   const heightStyles = {
     short: "max-h-[40vh]",
     default: "max-h-[50vh]",
-    tall: "max-h-[60vh]",
-    empty: "max-h-[50vh]",
+    tall: "max-h-[35vh] md:max-h-[60vh]",
+    empty: "max-h-[30vh] md:max-h-[60vh]",
   }
   // const dynamicBrushStyles =
   //   border_color !== undefined

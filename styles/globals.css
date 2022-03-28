@@ -163,7 +163,7 @@
   }
 
   .main {
-    @apply pt-24;
+    @apply pt-[5.5rem];
   }
 }
 
