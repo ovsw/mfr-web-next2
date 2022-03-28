@@ -45,10 +45,10 @@ const Hero = ({ blok: hero }) => {
           {/* <span className="block text-green-200">customer support</span> */}
         </h1>
         <div
-          className="mt-6  text-left  text-stone-400 leading-relaxed md:max-w-lg
+          className="mt-6  text-left  text-stone-400 lg:leading-relaxed
           text-xl
-          max-w-[5em]
-          hidden lg:block
+          max-w-[50%] 2xl:max-w-lg 
+          hidden md:block
         "
         >
           <RichTextRenderer data={text} />

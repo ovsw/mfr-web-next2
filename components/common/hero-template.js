@@ -19,10 +19,10 @@ const HeroTemplate = ({
   }
 
   const heightStyles = {
-    short: "py-16 sm:py-24 lg:py-40",
-    default: "py-16 sm:py-24 lg:py-36 xl:py-44 2xl:py-60",
-    tall: "py-16 sm:py-24 lg:py-80",
-    empty: "py-32 sm:py-36 md:py-60 xl:py-[35vh] 3xl:py-[30vh]",
+    short: "max-h-[40vh]",
+    default: "max-h-[50vh]",
+    tall: "max-h-[60vh]",
+    empty: "max-h-[50vh]",
   }
   // const dynamicBrushStyles =
   //   border_color !== undefined
@@ -39,11 +39,11 @@ const HeroTemplate = ({
 
   return (
     <div className={`Hero bgs-[#1e212b] ${sidesBgStyles[background_color]}`}>
-      <div className=" max-w-[1600px] mx-auto max-h-[70vh]">
-        <div className="relative bg-stone-300 max-h-[70vh] z-0">
+      <div className=" max-w-[1600px] mx-auto ">
+        <div className="relative bg-stone-300 z-0">
           {/* IMAGE */}
           {background_image?.filename && (
-            <div className="absolute inset-0 max-h-[70vh]">
+            <div className="absolute inset-0 ">
               <Image
                 src={background_image?.filename}
                 alt={background_image?.alt}
@@ -58,9 +58,11 @@ const HeroTemplate = ({
           )}
           {/* END IMAGE */}
           <div className="max-w-7xl mx-auto ">
-            <div className="relative sm:overflow-hidden  ">
-              <div className={`relative  text-white ${heightStyles[height]}`}>
+            <div className="relative sm:overflow-hidden">
+              <div className={`relative  text-white ${heightStyles[height]} flex items-center h-screen`}>
+                <div className="pl-12 4xl:pl-0 pt-12 2xl:pt-0">
                 {children}
+                </div>
               </div>
             </div>
           </div>
@@ -69,7 +71,7 @@ const HeroTemplate = ({
             className={`absolute -bottom-20 z-10 ${brushBorderThemes[border_color]}`}
           />
           <div
-            className={`bGBar ${sidesBgStyles[border_color]} full-width  absolute left-0 right-0 bottom-[85px] h-[100px] z-[-1]`}
+            className={`bGBar ${sidesBgStyles[border_color]} full-width  absolute left-0 right-0 -bottom-[20px] h-[80px] z-[-1]`}
             //
           ></div>
         </div>
