@@ -35,8 +35,8 @@ const navigation = {
   legal: [
     { name: "Accessibility Statement", href: "/accessibility-statement" },
     { name: "Accessibility Policy", href: "/accessibility-policy" },
-    { name: "Privacy", href: "/privacy-policy" },
-    { name: "Terms", href: "/terms-and-conditions" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms & Conditions", href: "/terms-and-conditions" },
   ],
   social: [
     {
