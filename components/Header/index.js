@@ -229,8 +229,7 @@ const tools = [
   },
   {
     name: "Documents and Forms",
-    description:
-      "Everything you need in terms of paperwork to run a sucessful fundraiser with Marianna's",
+    description: "Tools to help you throughout the fundraising process",
     href: "/documents-and-forms/",
     icon: DocumentTextIcon,
   },
