@@ -120,18 +120,10 @@ const Section = ({ blok: section }) => {
     <SectionThemeContext.Provider value={themeContextValues}>
       <section
         className={`SECTION px-4 lg:px-8 2xl:px-0 
-
         ${overflowHidden ? "overflow-hidden" : ""}
         ${bgStyles[background]} 
-
         ${topMarginStyles[margin_top]} 
-        
-        
-         
-        ${bottomMarginStyles[margin_bottom]} 
-
-        relative
-        `}
+        ${bottomMarginStyles[margin_bottom]} relative`}
       >
         {brushedSVGsTop[decoration_top] !== undefined &&
           React.createElement(brushedSVGsTop[decoration_top], {
