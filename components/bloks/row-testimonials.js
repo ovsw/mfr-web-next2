@@ -82,7 +82,7 @@ export default function TestimonialsRow({ blok: rowTestimonials }) {
                     </div>
                   </div>
                   <div className="flex flex-col  px-6 py-10 pt-0 text-stone-300 tracking-wider">
-                    <p className="text-base font-semibold leading-4 my-2 text-tertiary-600">
+                    <p className="text-base font-semibold leading-4 my-2 text-tertiary-500">
                       {item.author_name}
                     </p>
                     <p className="text-base leading-4">{item.author_info}</p>

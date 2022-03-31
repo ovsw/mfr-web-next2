@@ -19,7 +19,7 @@ const Pizza = ({ blok: hoagie }) => {
   const imageStyles = reversed ? "right-0" : "left-0"
 
   return (
-    <li className="relative full-width mt-20 lg:mt-28">
+    <div className="relative full-width mt-20 lg:mt-28">
       {/* IMAGE */}
       <div className={`lg:absolute ${imageWrapperStyles} lg:w-1/2`}>
         <div
@@ -69,7 +69,7 @@ const Pizza = ({ blok: hoagie }) => {
         </div>
       </div>
       {/* END CONTENT */}
-    </li>
+    </div>
   )
 }
 

@@ -8,7 +8,7 @@ import { SectionThemeContext } from "./section"
 
 const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
   // console.log("MainHeadingGroup component", mainHeadingGroup)
-  const { eyebrow, title, anchor_id } = mainHeadingGroup
+  const { eyebrow, title, anchor_id, heading_level } = mainHeadingGroup
 
   // dynamic styles based on section theme
   const sectionTheme = React.useContext(SectionThemeContext)
@@ -21,10 +21,12 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
     dark: "text-theme-offWhite",
   }
 
+  const HeadingLevel = heading_level || "h2"
+
   return (
     <div className={rootStyles}>
       {anchor_id && <span id={anchor_id}></span>}
-      <h2>
+      <HeadingLevel>
         {eyebrow && (
           <span
             className={`eyebrow leading-none inline-block -ml-px ${
@@ -42,7 +44,7 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
         >
           {title}
         </span>
-      </h2>
+      </HeadingLevel>
     </div>
   )
 }

@@ -4,9 +4,9 @@ const RowMenuListing = ({ blok: rowMenuListing }) => {
   // console.log("row menu listing", rowMenuListing)
 
   return (
-    <ul className="menuListingWrapper">
+    <div className="menuListingWrapper">
       {blockIterator(rowMenuListing.items)}
-    </ul>
+    </div>
   )
 }
 

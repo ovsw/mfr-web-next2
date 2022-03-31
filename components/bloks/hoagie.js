@@ -19,7 +19,7 @@ const Hoagie = ({ blok: hoagie }) => {
   const imageStyles = reversed ? "right-0" : "left-0"
 
   return (
-    <li className="relative full-width mt-20 md:mt-24">
+    <div className="relative full-width mt-20 md:mt-24">
       {/* IMAGE */}
       <div className={`lg:absolute lg:top-20 ${imageWrapperStyles} lg:w-1/2`}>
         <div
@@ -82,7 +82,7 @@ const Hoagie = ({ blok: hoagie }) => {
         </div>
       </div>
       {/* END CONTENT */}
-    </li>
+    </div>
   )
 }
 

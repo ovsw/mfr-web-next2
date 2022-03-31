@@ -16,13 +16,13 @@ export default function Home({ story: initialStory, recentPosts }) {
   return (
     <>
       <Head>
-        <title>{story ? story.name : "My Site"}</title>
+        <title>News & Events | Marianna's Fundraisers</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* {story.content && <StoryblokComponent blok={story.content} />} */}
       <div className="bg-themeFill-offWhite">
         <div className="newsWrapper pt-20">
-          <PostListFeatured posts={recentPosts.stories} />
+          <PostListFeatured posts={recentPosts.stories} heading_level="h1" />
         </div>
       </div>
     </>

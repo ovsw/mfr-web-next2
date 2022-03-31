@@ -4,15 +4,16 @@ import { Image } from "@storyofams/storyblok-toolkit"
 
 import { blogAuthors } from "../utils/blogAuthors"
 
-function PostListFeatured({ posts }) {
+function PostListFeatured({ posts, heading_level }) {
+  const HeadingLevel = heading_level || "h2"
   return (
     <section className="px-4 pb-32">
       <div className="max-w-7xl mx-auto max-w space-y-10">
         <div>
-          <h2>
+          <HeadingLevel>
             <span className="eyebrow block">Marianna's</span>
             <span className="block text-6xl font-bold">News & Events</span>
-          </h2>
+          </HeadingLevel>
         </div>
 
         {/* START SECTION CONTENT */}
