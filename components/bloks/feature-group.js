@@ -53,7 +53,7 @@ const FeatureGroup = ({ blok: featureGroup }) => {
         <Icon name={icon} title="icon" className="mr-4 " />
         {heading}
       </HeadingLevel>
-      <div className={`prose prose-stone prose-xl opacity-70 ${rootStyles}`}>
+      <div className={`prose prose-stone prose-xl opacity-80 ${rootStyles}`}>
         <RichTextRenderer data={text} />
       </div>
     </div>

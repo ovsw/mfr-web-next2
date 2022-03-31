@@ -33,7 +33,7 @@ const FaqItem = ({ blok: faqItem }) => {
             </span>
           </Disclosure.Button>
           <Disclosure.Panel as="dd" className="mt-2 pr-12">
-            <div className="prose prose-stone prose-xl opacity-70">
+            <div className="prose prose-stone prose-xl opacity-80">
               <RichTextRenderer data={faqItem.answer_single} />
             </div>
           </Disclosure.Panel>
