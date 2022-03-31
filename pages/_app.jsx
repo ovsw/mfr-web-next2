@@ -3,7 +3,6 @@ import { storyblokInit, apiPlugin } from "@storyblok/react"
 import { useEffect } from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-
 import { useRouter } from "next/router"
 
 // import Teaser from "../components/teaser"
@@ -129,7 +128,10 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Component {...pageProps} key={router.asPath} />
+      <Header />
+      <main className="main">
+        <Component {...pageProps} key={router.asPath} />
+      </main>
       <Footer />
     </>
   )

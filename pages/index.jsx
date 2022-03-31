@@ -20,7 +20,6 @@ export default function Home({ story: initialStory, recentPosts }) {
         <title>{story ? story.name : "My Site"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
 
       {story.content && <StoryblokComponent blok={story.content} />}
       <PostListFeatured posts={recentPosts.stories} />
