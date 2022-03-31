@@ -12,6 +12,7 @@ const Form = ({ blok: cognitoForm }) => {
         src={`https://www.cognitoforms.com/f/xPoircp7HEGoNo_tpFEirg/${cognitoForm.cognito_form_id}`}
         style={{ border: "0", width: "100%" }}
         height="auto"
+        title="embedded form"
       />
     </div>
   )
