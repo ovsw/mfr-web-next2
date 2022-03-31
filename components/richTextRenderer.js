@@ -1,7 +1,7 @@
 import * as React from "react"
 import { render, MARK_LINK } from "storyblok-rich-text-react-renderer"
 import Link from "next/link"
-import RowBigImage from "../components/bloks/row-big-image"
+// import RowBigImage from "../components/bloks/row-big-image"
 
 const RichTextField = ({ data }) => {
   return (
