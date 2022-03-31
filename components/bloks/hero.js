@@ -34,25 +34,29 @@ const Hero = ({ blok: hero }) => {
         height={height}
         background_color={background_color}
       >
-        <h1 className="text-left text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl max-w-sm md:max-w-none ">
-          <span
-            className="block text-white
+        {title && (
+          <h1 className="text-left text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl max-w-sm md:max-w-none ">
+            <span
+              className="block text-white
            max-w-[7em] sm:max-w-[7em] lg:max-w-md xl:max-w-xl
            "
-          >
-            {title}
-          </span>
-          {/* <span className="block text-green-200">customer support</span> */}
-        </h1>
-        <div
-          className="mt-6  text-left  text-stone-400 lg:leading-relaxed
-          text-xl
-          max-w-[50%] 2xl:max-w-lg 
+            >
+              {title}
+            </span>
+            {/* <span className="block text-green-200">customer support</span> */}
+          </h1>
+        )}
+        {text && (
+          <div
+            className="mt-6 text-left text-stone-400 lg:leading-relaxed
+          text-md lg:text-xl
+          max-w-[40%] lg:max-w[50%] 2xl:max-w-lg 
           hidden md:block
         "
-        >
-          <RichTextRenderer data={text} />
-        </div>
+          >
+            <RichTextRenderer data={text} />
+          </div>
+        )}
 
         {/* BUTTONS */}
         {buttons.length > 0 && (
