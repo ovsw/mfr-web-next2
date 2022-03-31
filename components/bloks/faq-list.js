@@ -13,9 +13,9 @@ const FaqList = ({ blok: faqList }) => {
         <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-5xl">
           {faqList.title}
         </h2>
-        <dl className="mt-12 space-y-6 divide-y divide-gray-200">
+        <div className="mt-12 space-y-6 divide-y divide-gray-200">
           {blockIterator(faqList.items)}
-        </dl>
+        </div>
       </div>
     </div>
   )

@@ -14,26 +14,24 @@ const FaqItem = ({ blok: faqItem }) => {
     <Disclosure as="div" key={faqItem.question} className="pt-6">
       {({ open }) => (
         <>
-          <dt className="text-lg">
-            <Disclosure.Button className="text-left w-full flex justify-between items-center text-gray-500">
-              <span
-                className={`font-semibold text-2xl  ${
-                  !open ? "text-gray-600 " : "text-accent-500 opacity-70"
-                }`}
-              >
-                {faqItem.question}
-              </span>
-              <span className="ml-6 h-7 flex items-center">
-                <ChevronDownIcon
-                  className={classNames(
-                    open ? "-rotate-180" : "rotate-0",
-                    "h-6 w-6 transform"
-                  )}
-                  aria-hidden="true"
-                />
-              </span>
-            </Disclosure.Button>
-          </dt>
+          <Disclosure.Button className=" text-lg text-left w-full flex justify-between items-center text-gray-500">
+            <span
+              className={`font-semibold text-2xl  ${
+                !open ? "text-gray-600 " : "text-accent-500 opacity-70"
+              }`}
+            >
+              {faqItem.question}
+            </span>
+            <span className="ml-6 h-7 flex items-center">
+              <ChevronDownIcon
+                className={classNames(
+                  open ? "-rotate-180" : "rotate-0",
+                  "h-6 w-6 transform"
+                )}
+                aria-hidden="true"
+              />
+            </span>
+          </Disclosure.Button>
           <Disclosure.Panel as="dd" className="mt-2 pr-12">
             <div className="prose prose-stone prose-xl opacity-70">
               <RichTextRenderer data={faqItem.answer_single} />
