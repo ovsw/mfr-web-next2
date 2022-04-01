@@ -47,5 +47,17 @@ export default function ogImage(story) {
     }
   }
 
+  // if we're on a news page and have a main_image
+  if (story.content.component == "blog-post") {
+    const newsImage = story.content.main_image
+
+    return {
+      url: `${newsImage.filename}/m/1200x630`,
+      width: 1200,
+      height: 630,
+      alt: `${newsImage.alt}`,
+    }
+  }
+
   return null
 }
