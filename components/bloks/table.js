@@ -10,7 +10,7 @@ import { SectionThemeContext } from "./section"
 const CustomTable = ({ blok: customTable }) => {
   const sectionTheme = React.useContext(SectionThemeContext)
 
-  const { table } = customTable
+  const { table, remove_margins } = customTable
   const { thead = [], tbody = [] } = table
 
   const rootStyles =
@@ -20,8 +20,10 @@ const CustomTable = ({ blok: customTable }) => {
         }`
       : ""
 
+  const marginStyles = remove_margins ? "-mt-8" : ""
+
   return (
-    <div className={`${rootStyles} my-16`}>
+    <div className={`${rootStyles} ${marginStyles}`}>
       {table == "" && (
         <p className="text-2xl font-bold text-accent border p-20">
           empty table
@@ -29,7 +31,7 @@ const CustomTable = ({ blok: customTable }) => {
       )}
       {table != "" && (
         <table
-          className="custom-table bg-white border-collapse text-lg text-stone-800
+          className="custom-table border-collapse text-lg text-stone-100 bg-primary
         
         mb-3 
         table-auto font-systemsans
