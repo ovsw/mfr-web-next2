@@ -229,7 +229,7 @@ const tools = [
   },
   {
     name: "Documents and Forms",
-    description: "Tools to help you throughout the fundraising process",
+    description: "Tools to help you throughout the fundraising process.",
     href: "/documents-and-forms/",
     icon: DocumentTextIcon,
   },
