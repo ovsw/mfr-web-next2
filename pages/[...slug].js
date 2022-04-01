@@ -18,6 +18,9 @@ export default function Page({ story: initialStory, preview }) {
     return <div>Loading...</div>
   }
 
+  const ogContent =
+    getOgImage(story) != null ? { images: [getOgImage(story)] } : null
+
   return (
     <>
       {/* <Head>
@@ -29,7 +32,7 @@ export default function Page({ story: initialStory, preview }) {
         description={story.content.seo_description}
         canonical={`${SEO.openGraph.url}/${story.full_slug}`}
         noindex={story.content.seo_noindex}
-        openGraph={{ images: [getOgImage(story)] }}
+        openGraph={ogContent}
       />
 
       <StoryblokComponent blok={story.content} />
