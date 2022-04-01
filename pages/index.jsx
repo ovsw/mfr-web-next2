@@ -17,8 +17,6 @@ export default function Home({ story: initialStory, recentPosts }) {
   //   return <div>Loading...</div>
   // }
 
-  console.log("seo", story.content)
-
   return (
     <>
       {/* <Head>
