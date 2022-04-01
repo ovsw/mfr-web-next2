@@ -1,10 +1,13 @@
-import Head from "next/head"
+import { NextSeo } from "next-seo"
+import SEO from "../next-seo.config"
 
 import {
   useStoryblokState,
   useStoryblokApi,
   StoryblokComponent,
 } from "@storyblok/react"
+
+import getOgImage from "../utils/getOgImageFromStory"
 
 export default function Page({ story: initialStory, preview }) {
   // const enableBridge = true; // load the storyblok bridge everywhere
@@ -17,10 +20,17 @@ export default function Page({ story: initialStory, preview }) {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>{story ? story.name : "My Site"}</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
+      <NextSeo
+        title={story.content.seo_title}
+        description={story.content.seo_description}
+        canonical={`${SEO.openGraph.url}/${story.full_slug}`}
+        noindex={story.content.seo_noindex}
+        openGraph={{ images: [getOgImage(story)] }}
+      />
 
       <StoryblokComponent blok={story.content} />
     </>

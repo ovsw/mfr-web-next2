@@ -46,6 +46,9 @@ import CustomTable from "../components/bloks/table"
 import FormCognito from "../components/bloks/form-cognito"
 import PageHeading from "../components/bloks/page-heading"
 
+import { DefaultSeo } from "next-seo"
+import SEO from "../next-seo.config"
+
 import "../styles/globals.css"
 
 storyblokInit({
@@ -128,6 +131,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <DefaultSeo {...SEO} />
       <Header />
       <main className="main">
         <Component {...pageProps} key={router.asPath} />

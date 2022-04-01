@@ -1,3 +1,6 @@
+import { NextSeo } from "next-seo"
+import SEO from "../next-seo.config"
+
 import {
   useStoryblokState,
   useStoryblokApi,
@@ -14,13 +17,19 @@ export default function Home({ story: initialStory, recentPosts }) {
   //   return <div>Loading...</div>
   // }
 
+  console.log("seo", story.content)
+
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>{story ? story.name : "My Site"}</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      </Head> */}
+      <NextSeo
+        title={story.content.seo_title}
+        description={story.content.seo_description}
+        canonical={`${SEO.openGraph.url}/`}
+      />
       {story.content && <StoryblokComponent blok={story.content} />}
       <PostListFeatured posts={recentPosts.stories} />
     </>

@@ -1,3 +1,6 @@
+import { NextSeo } from "next-seo"
+import SEO from "../next-seo.config"
+
 import {
   useStoryblokState,
   useStoryblokApi,
@@ -15,10 +18,17 @@ export default function Home({ story: initialStory, recentPosts }) {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>News & Events | Marianna's Fundraisers</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
+
+      <NextSeo
+        title="News and Events"
+        description="Get the latest company news, events and promotions."
+        canonical={`${SEO.openGraph.url}/news`}
+      />
+
       {/* {story.content && <StoryblokComponent blok={story.content} />} */}
       <div className="bg-themeFill-offWhite">
         <div className="newsWrapper pt-20">
