@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mfr-web-next.vercel.app
+
+# Sitemaps
+Sitemap: https://mfr-web-next.vercel.app/sitemap.xml
