@@ -175,7 +175,7 @@ const aboutUs = [
   {
     name: "Fresh & Clean Obsessed",
     description:
-      "We believe in only offering food that we ourselves love to eat.",
+      "We only use quality ingredients, prepared fresh daily in the highest standard of cleanliness.",
     href: "/fresh-and-clean-obsessed",
     icon: SparklesIcon,
   },
