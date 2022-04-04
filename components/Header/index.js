@@ -144,8 +144,8 @@ const fundraisers = [
     icon: CurrencyDollarIcon,
   },
   {
-    name: "The Fundraiser that Sells Itself",
-    description: "Why Marianna's truly is 'The Fundraiser that Sells Itself.'",
+    name: "The Fundraiser That Sells Itself",
+    description: "Why Marianna's truly is 'The Fundraiser That Sells Itself.'",
     href: "/the-fundraiser-that-sells-itself",
     icon: ClipboardCheckIcon,
   },
