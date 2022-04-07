@@ -40,7 +40,7 @@ const HeroTemplate = ({
   return (
     <div className={`Hero bgs-[#1e212b] ${sidesBgStyles[background_color]}`}>
       <div className=" max-w-[1600px] mx-auto ">
-        <div className="relative bg-stone-300 z-0">
+        <div className="relative bg-primary-500 z-0">
           {/* IMAGE */}
           {background_image?.filename && (
             <div className="absolute inset-0 ">
@@ -53,16 +53,16 @@ const HeroTemplate = ({
                 focus={background_image?.focus}
                 className=""
               />
-              <div className="absolute inset-0  mix-blend-multiply bg-gradient-to-r from-gray-900 via-gray-500 to-transparent sm:from-gray-100 sm:via-gray-100 sm:to-gray-100" />
+              <div className="absolute inset-0  mix-blend-multiply bg-gradient-to-r from-gray-900 via-gray-500 to-transparent sm:from-transparent sm:via-transparent sm:to-transparent" />
             </div>
           )}
           {/* END IMAGE */}
           <div className="max-w-7xl mx-auto ">
             <div className="relative sm:overflow-hidden">
-              <div className={`relative  text-white ${heightStyles[height]} flex items-center h-screen`}>
-                <div className="pl-12 4xl:pl-0 pt-12 2xl:pt-0">
-                {children}
-                </div>
+              <div
+                className={`relative  text-white ${heightStyles[height]} flex items-center h-screen`}
+              >
+                <div className="pl-12 4xl:pl-0 pt-12 2xl:pt-0">{children}</div>
               </div>
             </div>
           </div>

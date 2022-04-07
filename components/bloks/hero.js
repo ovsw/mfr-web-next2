@@ -48,7 +48,7 @@ const Hero = ({ blok: hero }) => {
         )}
         {text && (
           <div
-            className="mt-6 text-left text-stone-400 lg:leading-relaxed
+            className="mt-6 text-left text-stone-200 lg:leading-relaxed
           text-md lg:text-xl
           max-w-[40%] lg:max-w[50%] 2xl:max-w-lg 
           hidden md:block
