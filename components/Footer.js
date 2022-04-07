@@ -134,7 +134,7 @@ export default function SiteFooter() {
               <Image
                 className=""
                 src={DelGrossoBadge}
-                alt="from the kitchens of DelGrosso badge"
+                alt=""
                 layout="intrinsic"
               />
             </div>
