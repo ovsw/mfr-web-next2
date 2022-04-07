@@ -179,6 +179,7 @@
   .bg-muslin {
     background: url("/images/bg/bg-muslin-dark-cold.jpg") center center;
     background-size: cover;
+    background-color: #000;
   }
   .bg-dark-table-md {
     background: linear-gradient(
