@@ -115,7 +115,7 @@ const navigation = {
 export default function SiteFooter() {
   return (
     <footer className="bg-primary-600" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">
+      <h2 id="footer-heading" className="sr-only text-white">
         Footer
       </h2>
 
