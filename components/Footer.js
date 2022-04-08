@@ -163,7 +163,15 @@ export default function SiteFooter() {
               </a>
               .
             </p>
-            <div className="flex space-x-6">
+
+            <div className="flex space-x-6 items-center">
+              <p>
+                <Link href="/submit-your-order">
+                  <a className="btn btn-small btn-inverted-accent">
+                    Submit Order
+                  </a>
+                </Link>
+              </p>
               {navigation.social.map(item => (
                 <a
                   key={item.name}
