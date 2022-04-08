@@ -8,7 +8,7 @@ const navigation = {
   fundraisers: [
     { name: "How it Works", href: "/how-it-works/" },
     { name: "Benefits", href: "/the-fundraiser-that-sells-itself/" },
-    { name: "Menu", href: "/menu/" },
+    { name: "Menu", href: "/products" },
     { name: "Schedule Free Tasting", href: "/schedule-a-free-tasting/" },
   ],
   // aboutUs: [

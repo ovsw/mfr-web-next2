@@ -70,7 +70,7 @@ const Header = ({ props }) => {
                   description="We offer 14” famous hoagies and 12” delicious pizzas for your fundraising needs. You'll love how easy they are to sell and your customers will love the variety."
                 />
 
-                <Link href="/menu">
+                <Link href="/products">
                   <a className="main-menu-item text-stone-800">Menu</a>
                 </Link>
 
@@ -269,7 +269,7 @@ const mobileMainMenu = [
   fundraisers[1],
   {
     name: "Food Menu",
-    href: "/menu",
+    href: "/products",
     icon: HeartIcon,
   },
 ]
