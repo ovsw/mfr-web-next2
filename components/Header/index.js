@@ -274,10 +274,13 @@ const mobileMainMenu = [
   },
 ]
 const mobileSecondaryMenu = [
-  tools[3],
+  // tools[3],
+  fundraisers[3],
   aboutUs[1],
   aboutUs[0],
   // aboutUs[4],
   aboutUs[5],
+  aboutUs[2],
+  aboutUs[6],
   // fundraisers[3],
 ]
