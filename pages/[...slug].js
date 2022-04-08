@@ -104,6 +104,6 @@ export async function getStaticPaths() {
 
   return {
     paths: paths,
-    fallback: "blocking", // used to be false, added blocking for on-demand ISR
+    fallback: false, // used to be false, added blocking for on-demand ISR
   }
 }
