@@ -49,14 +49,14 @@ export default function TestimonialsRow({ blok: rowTestimonials }) {
         <div className="max-w-lg">{heading && blockIterator(heading)}</div>
         <div className="flex gap-4 items-center ml-10 pb-1">
           <button onClick={() => swiper.slidePrev()} className="cursor-pointer">
-            <span className="sr-only">previous testimonial</span>
+            <span className="sr-only text-white">previous testimonial</span>
             <ChevronLeftRound className={prevButtonStyles} />
           </button>
           <button
             onClick={() => swiper.slideNext()}
             className={nextButtonStyles}
           >
-            <span className="sr-only">next testimonial</span>
+            <span className="sr-only text-white">next testimonial</span>
             <ChevronRightRound />
           </button>
         </div>
