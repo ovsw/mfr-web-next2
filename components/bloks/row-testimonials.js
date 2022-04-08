@@ -62,7 +62,7 @@ export default function TestimonialsRow({ blok: rowTestimonials }) {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 ">
+      <div className="grid grid-cols-1 xl:grid-cols-2 ">
         <div className="" key={testimonials_list[1]._uid}>
           <Swiper
             slidesPerView={1}
@@ -96,7 +96,7 @@ export default function TestimonialsRow({ blok: rowTestimonials }) {
         {/* IMAGE */}
         <div
           className="hidden xl:block
-        absolute -top-24 -bottom-20 right-0 z-40
+          absolute -top-24 -bottom-20 right-0 z-40
           md:pt-0 
          aspect-[668/872]
         "
