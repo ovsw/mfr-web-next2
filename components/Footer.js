@@ -119,7 +119,7 @@ export default function SiteFooter() {
         Footer
       </h2>
 
-      <div className="max-w-7xl mx-auto pb-12 pt-6 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto pb-12 pt-16 px-4 sm:px-6 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8 mb-10">
           <div className="logos flex space-x-10">
             <div className=" w-52 flex items-center">
