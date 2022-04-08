@@ -6,9 +6,9 @@ import {
   useStoryblokApi,
   StoryblokComponent,
 } from "@storyblok/react"
-import Head from "next/head"
+// import Head from "next/head"
 import PostListFeatured from "../components/posts-list-featured"
-import Header from "../components/Header"
+// import Header from "../components/Header"
 
 export default function Home({ story: initialStory, recentPosts }) {
   const story = useStoryblokState(initialStory)
@@ -50,6 +50,7 @@ export async function getStaticProps({ preview = false }) {
       preview,
       recentPosts: recentPostsData,
     },
-    revalidate: 3600, // revalidate every hour
+    // removed for on-demand ISR
+    // revalidate: 3600, // revalidate every hour
   }
 }

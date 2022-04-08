@@ -67,7 +67,8 @@ export async function getStaticProps({ params, preview = false }) {
       story: data ? data.story : null,
       preview,
     },
-    revalidate: 13, // revalidate every hour
+    // removed revalidate because replaced with On-demand ISR
+    // revalidate: 13, // revalidate every hour
   }
 }
 
@@ -103,6 +104,6 @@ export async function getStaticPaths() {
 
   return {
     paths: paths,
-    fallback: false,
+    fallback: "blocking", // used to be false, added blocking for on-demand ISR
   }
 }
