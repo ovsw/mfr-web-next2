@@ -23,15 +23,19 @@ const Row = ({ blok: rowCta }) => {
       <div
         className={`md:flex gap-8 justify-between  items-center min-h-[290px]`}
       >
-        <div className="space-y-8 max-w-2xl">
-          <div className="space-y-4">{blockIterator(content_main)}</div>
-          {blockIterator(content_buttons)}
+        <div className="space-y-8 px-[4%] lg:max-w-xl xl:max-w-2xl ">
+          <div className="space-y-4 text-center lg:text-left">
+            {blockIterator(content_main)}
+          </div>
+          <div className="flex justify-center lg:justify-start">
+            {blockIterator(content_buttons)}
+          </div>
         </div>
       </div>
 
       {/* image */}
       <div
-        className=" hidden sm:block
+        className=" hidden lg:block
         absolute -top-[176px] -bottom-20 right-0 z-40
           md:pt-0 
          aspect-[1/1]
