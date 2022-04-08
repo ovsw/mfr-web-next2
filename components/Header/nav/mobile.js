@@ -129,7 +129,7 @@ const MobileNav = ({ mobileMainMenu, mobileSecondaryMenu }) => {
                   </a>
                 </Link>
                 {/* Existing customer? */}
-                <Link href="/get-support">
+                <Link href="/get-assistance">
                   <a
                     className="btn btn-primary btn-small"
                     onClick={async () => {
