@@ -90,7 +90,7 @@ const Header = ({ props }) => {
                 </Link>
               </Popover.Group>
 
-              <div className="hidden md:flex  lg:flex-1 justify-end ">
+              <div className="hidden md:flex  lg:flex-1 justify-end space-x-2 ">
                 <Link href="/schedule-a-free-tasting">
                   <a
                     className="
@@ -100,7 +100,19 @@ const Header = ({ props }) => {
               btn-small
               "
                   >
-                    Book a Free Tasting
+                    Book Free Tasting
+                  </a>
+                </Link>
+                <Link href="/submit-your-order">
+                  <a
+                    className="
+              whitespace-nowrap 
+              flex items-center justify-center 
+              btn btn-outlined-primary
+              btn-small
+              "
+                  >
+                    Submit Order
                   </a>
                 </Link>
               </div>
@@ -276,11 +288,11 @@ const mobileMainMenu = [
 const mobileSecondaryMenu = [
   // tools[3],
   fundraisers[3],
-  aboutUs[1],
   aboutUs[0],
   // aboutUs[4],
-  aboutUs[5],
   aboutUs[2],
+  aboutUs[5],
+  aboutUs[1],
   aboutUs[6],
   // fundraisers[3],
 ]
