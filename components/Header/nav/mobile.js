@@ -129,7 +129,7 @@ const MobileNav = ({ mobileMainMenu, mobileSecondaryMenu }) => {
                   </a>
                 </Link>
                 {/* Existing customer? */}
-                <Link href="/get-assistance">
+                <Link href="/submit-your-order">
                   <a
                     className="btn btn-primary btn-small"
                     onClick={async () => {
@@ -139,10 +139,23 @@ const MobileNav = ({ mobileMainMenu, mobileSecondaryMenu }) => {
                     <span className="mr-2">
                       <PhoneIcon className="h-5 w-5" aria-hidden="true" />
                     </span>{" "}
-                    <span className="">Get Support / Contact</span>
+                    <span className="">Submit Order</span>
                   </a>
                 </Link>
               </div>
+              <Link href="/get-assistance">
+                <a
+                  className=" flex items-center justify-center md:justify-start ml-24 pl-5 mt-5 border-red-600  underline text-lg"
+                  onClick={async () => {
+                    close()
+                  }}
+                >
+                  <span className="mr-2">
+                    <PhoneIcon className="h-5 w-5" aria-hidden="true" />
+                  </span>{" "}
+                  <span className="">Get Support / Contact</span>
+                </a>
+              </Link>
               {/* END EXTRA ITEMS BUTTONS  */}
             </div>
           </div>
