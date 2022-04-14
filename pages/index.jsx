@@ -6,6 +6,9 @@ import {
   useStoryblokApi,
   StoryblokComponent,
 } from "@storyblok/react"
+
+import getOgImage from "../utils/getOgImageFromStory"
+
 // import Head from "next/head"
 import PostListFeatured from "../components/posts-list-featured"
 // import Header from "../components/Header"
@@ -17,6 +20,9 @@ export default function Home({ story: initialStory, recentPosts }) {
   //   return <div>Loading...</div>
   // }
 
+  const ogContent =
+    getOgImage(story) != null ? { images: [getOgImage(story)] } : null
+
   return (
     <>
       {/* <Head>
@@ -27,6 +33,7 @@ export default function Home({ story: initialStory, recentPosts }) {
         title={story.content.seo_title}
         description={story.content.seo_description}
         canonical={`${SEO.openGraph.url}/`}
+        openGraph={ogContent}
       />
       {story.content && <StoryblokComponent blok={story.content} />}
       <PostListFeatured posts={recentPosts.stories} />
