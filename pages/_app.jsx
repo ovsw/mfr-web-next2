@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import { useRouter } from "next/router"
+import Script from "next/script"
 
 // import Teaser from "../components/teaser"
 // import Feature from "../components/feature"
@@ -132,6 +133,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <DefaultSeo {...SEO} />
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=UA-38103097-1"
+        strategy="afterInteractive"
+      />
       <Header />
       <main className="main">
         <Component {...pageProps} key={router.asPath} />
