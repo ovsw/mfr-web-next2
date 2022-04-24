@@ -145,7 +145,7 @@ const MobileNav = ({ mobileMainMenu, mobileSecondaryMenu }) => {
               </div>
               <Link href="/get-assistance">
                 <a
-                  className=" flex items-center justify-center md:justify-start ml-24 pl-5 mt-5 border-red-600  underline text-lg"
+                  className=" flex items-center justify-center md:justify-start mt-5 border-red-600  underline text-lg"
                   onClick={async () => {
                     close()
                   }}
