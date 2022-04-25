@@ -2,52 +2,52 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: "/products/",
+        source: "/products",
         destination: "/menu",
         permanent: true,
       },
       {
-        source: "/about-us/our-history/",
+        source: "/about-us/our-history",
         destination: "/our-story-and-promise",
         permanent: true,
       },
       {
-        source: "/about-us/our-promise/",
+        source: "/about-us/our-promise",
         destination: "/our-story-and-promise",
         permanent: true,
       },
       {
-        source: "/about-us/our-team/",
+        source: "/about-us/our-team",
         destination: "/hoagie-heroes",
         permanent: true,
       },
       {
-        source: "/testimonials/",
+        source: "/testimonials",
         destination: "/success-stories",
         permanent: true,
       },
       {
-        source: "/about-us/join-our-team/",
+        source: "/about-us/join-our-team",
         destination: "/jobs",
         permanent: true,
       },
       {
-        source: "/about-us/in-the-news/",
+        source: "/about-us/in-the-news",
         destination: "/news",
         permanent: true,
       },
       {
-        source: "/about-us/contact-us/",
+        source: "/about-us/contact-us",
         destination: "/contact-us",
         permanent: true,
       },
       {
-        source: "/find-a-sale/",
+        source: "/find-a-sale",
         destination: "/contact-us",
         permanent: true,
       },
       {
-        source: "/selling-tools/",
+        source: "/selling-tools",
         destination: "/fundraiser-resources",
         permanent: true,
       },
