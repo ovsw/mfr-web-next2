@@ -26,9 +26,9 @@ const MobileNav = ({ mobileMainMenu, mobileSecondaryMenu }) => {
             {/* MOBILE MENU MAIN */}
             <div className="pt-4 pb-6 px-5">
               {/* MOBILE MENU TOP */}
-              <div className="flex">
+              <div className="flex items-center justify-between">
                 <Link href="/">
-                  <a className="w-24 sm:w-40 pt-1 mr-auto md:mx-auto">
+                  <a className="w-24 sm:w-40 pt-1 md:mx-auto">
                     <Image
                       src={DesktopLogo}
                       alt="Marianna's Fundraisers Logo"
@@ -36,7 +36,7 @@ const MobileNav = ({ mobileMainMenu, mobileSecondaryMenu }) => {
                   </a>
                 </Link>
 
-                <div className="-mr-2 relative z-50">
+                <div className="-mr-2">
                   <Popover.Button className="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-primary hover:text-stone-500 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
@@ -145,7 +145,7 @@ const MobileNav = ({ mobileMainMenu, mobileSecondaryMenu }) => {
               </div>
               <Link href="/get-assistance">
                 <a
-                  className=" flex items-center justify-center md:justify-start mt-5 border-red-600  underline text-lg"
+                  className=" flex items-center justify-center md:justify-start ml-24 pl-5 mt-5 border-red-600  underline text-lg"
                   onClick={async () => {
                     close()
                   }}
