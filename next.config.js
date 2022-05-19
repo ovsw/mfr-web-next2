@@ -42,11 +42,6 @@ module.exports = {
         permanent: true,
       },
       {
-        source: "/find-a-sale",
-        destination: "/contact-us",
-        permanent: true,
-      },
-      {
         source: "/selling-tools",
         destination: "/fundraiser-resources",
         permanent: true,
