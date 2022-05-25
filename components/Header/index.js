@@ -9,6 +9,7 @@ import {
   DocumentAddIcon,
   DocumentTextIcon,
   HeartIcon,
+  LocationMarkerIcon,
   MenuIcon,
   NewspaperIcon,
   PhoneIcon,
@@ -16,6 +17,7 @@ import {
   SparklesIcon,
   UsersIcon,
   StarIcon,
+  SearchIcon,
   TemplateIcon,
   UserGroupIcon,
 } from "@heroicons/react/outline"
@@ -180,6 +182,13 @@ const fundraisers = [
       "Sample our famous food, and get a personal consultation from our experts.",
     href: "/schedule-a-free-tasting",
     icon: CalendarIcon,
+  },
+  {
+    name: "Find a Sale",
+    description:
+      "Would you like to purchase a fundraiser but don’t know who is selling? We can help.",
+    href: "/find-a-sale",
+    icon: SearchIcon,
   },
 ]
 
