@@ -8,7 +8,7 @@ export const blogAuthors = {
   amie: {
     name: "Amie Uliano-Parisi",
     title: "Marketing Coordinator",
-    avatarImage: "/images/avatars/amie-uliano-parisi.jpg",
+    avatarImage: "/images/avatars/amie-uliano-parisi-2.jpg",
     bio: "short bio goes here.",
   },
   juls: {
