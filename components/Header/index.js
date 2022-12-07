@@ -5,6 +5,7 @@ import {
   ChartBarIcon,
   ChatAltIcon,
   ClipboardCheckIcon,
+  ClockIcon,
   CurrencyDollarIcon,
   DocumentAddIcon,
   DocumentTextIcon,
@@ -237,6 +238,12 @@ const aboutUs = [
     description: "Hear from some of our Hoagie Heroes.",
     href: "/success-stories",
     icon: StarIcon,
+  },
+  {
+    name: "Hours of Operation",
+    description: "for office and delivery.",
+    href: "/hours-of-operations",
+    icon: ClockIcon,
   },
 ]
 
