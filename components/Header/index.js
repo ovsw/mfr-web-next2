@@ -242,7 +242,7 @@ const aboutUs = [
   {
     name: "Hours of Operation",
     description: "for office and delivery.",
-    href: "/hours-of-operations",
+    href: "/hours-of-operation",
     icon: ClockIcon,
   },
 ]
