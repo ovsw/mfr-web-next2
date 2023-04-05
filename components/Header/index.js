@@ -21,7 +21,7 @@ import {
   SearchIcon,
   TemplateIcon,
   UserGroupIcon,
-  BanknotesIcon
+  BanknotesIcon,
 } from "@heroicons/react/outline"
 import Link from "next/link"
 import Image from "next/image"
