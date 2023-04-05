@@ -21,6 +21,7 @@ import {
   SearchIcon,
   TemplateIcon,
   UserGroupIcon,
+  BanknotesIcon
 } from "@heroicons/react/outline"
 import Link from "next/link"
 import Image from "next/image"
@@ -190,6 +191,13 @@ const fundraisers = [
       "Would you like to purchase a fundraiser but don’t know who is selling? We can help.",
     href: "/find-a-sale",
     icon: SearchIcon,
+  },
+  {
+    name: "Special Fundraising Events",
+    description:
+      "Non Profit Groups hosting online sales.",
+    href: "/special-fundraising-events",
+    icon: BanknotesIcon,
   },
 ]
 
