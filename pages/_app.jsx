@@ -1,10 +1,12 @@
 import * as React from "react"
 import { storyblokInit, apiPlugin } from "@storyblok/react"
-import { useEffect } from "react"
+import { useRouter } from "next/router"
+import { useEffect } from "react";
+import Script from "next/script"
+import * as gtag from "../utils/gtag";
+
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import { useRouter } from "next/router"
-import Script from "next/script"
 
 // import Teaser from "../components/teaser"
 // import Feature from "../components/feature"
@@ -118,6 +120,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
   useEffect(() => {
+    // scroll anchor into view if present
     const hash = window.location.hash
     if (hash) {
       setTimeout(() => {
@@ -128,15 +131,44 @@ function MyApp({ Component, pageProps }) {
         })
       }, 100)
     }
-  })
+
+    // gtag route change
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+    
+  }, [router.events]);
 
   return (
     <>
       <DefaultSeo {...SEO} />
-      <Script
+      {/* <Script
         src="https://www.googletagmanager.com/gtag/js?id=UA-38103097-1"
         strategy="afterInteractive"
+      /> */}
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
+
       <Header />
       <main className="main">
         <Component {...pageProps} key={router.asPath} />
