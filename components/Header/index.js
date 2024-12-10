@@ -14,6 +14,7 @@ import {
   MenuIcon,
   NewspaperIcon,
   PhoneIcon,
+  PlayIcon,
   QuestionMarkCircleIcon,
   SparklesIcon,
   UsersIcon,
@@ -278,7 +279,7 @@ const tools = [
   {
     name: "Fundraiser FAQs",
     description:
-      "Frequent questions and just as many answers – useful info about running a Marianna’s Fundraiser.",
+      "Frequent questions and just as many answers – useful info about running a Marianna's Fundraiser.",
     href: "/fundraiser-frequently-asked-questions",
     icon: QuestionMarkCircleIcon,
   },
@@ -295,6 +296,13 @@ const tools = [
       "Use this to submit your order to us, once you're done selling.",
     href: "/submit-your-order",
     icon: DocumentAddIcon,
+  },
+  {
+    name: "Video Guides",
+    description:
+      "Watch our helpful video guides to learn more about running your fundraiser.",
+    href: "/video-guides",
+    icon: PlayIcon,
   },
 ]
 
