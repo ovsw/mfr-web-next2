@@ -95,7 +95,7 @@ const Header = ({ props }) => {
               </Popover.Group>
 
               <div className="hidden md:flex  lg:flex-1 justify-end space-x-2 ">
-                <Link href="/schedule-a-free-tasting">
+                {/* <Link href="/schedule-a-free-tasting">
                   <a
                     className="
               whitespace-nowrap 
@@ -106,7 +106,7 @@ const Header = ({ props }) => {
                   >
                     Book Free Tasting
                   </a>
-                </Link>
+                </Link> */}
                 <Link href="/submit-your-order">
                   <a
                     className="

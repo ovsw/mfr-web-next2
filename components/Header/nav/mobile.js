@@ -115,7 +115,7 @@ const MobileNav = ({ mobileMainMenu, mobileSecondaryMenu }) => {
 
               {/* EXTRA ITEMS BUTTONS  */}
               <div className="mt-6 space-y-4 md:space-y-0 md:space-x-4">
-                <Link href="/schedule-a-free-tasting">
+                {/* <Link href="/schedule-a-free-tasting">
                   <a
                     className="btn btn-accent btn-small"
                     onClick={async () => {
@@ -127,7 +127,7 @@ const MobileNav = ({ mobileMainMenu, mobileSecondaryMenu }) => {
                     </span>
                     Book Free Tasting
                   </a>
-                </Link>
+                </Link> */}
                 {/* Existing customer? */}
                 <Link href="/submit-your-order">
                   <a
