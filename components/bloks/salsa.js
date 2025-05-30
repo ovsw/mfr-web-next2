@@ -54,13 +54,8 @@ const Salsa = ({ blok: hoagie }) => {
               <div className="inline-grid">
                 <Link href={`/${link.cached_url}`}>
                   <a className="btn btn-accent">
-                    <Icon
-                      name="pizza"
-                      height="1.5em"
-                      title="icon"
-                      className="mr-3"
-                    />
                     Details
+                    <Icon height="1.5em" title="icon" className="mr-3" />
                   </a>
                 </Link>
               </div>
