@@ -1,9 +1,9 @@
 import * as React from "react"
 import { storyblokInit, apiPlugin } from "@storyblok/react"
 import { useRouter } from "next/router"
-import { useEffect } from "react";
+import { useEffect } from "react"
 import Script from "next/script"
-import * as gtag from "../utils/gtag";
+import * as gtag from "../utils/gtag"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -37,6 +37,7 @@ import RowTestimonials from "../components/bloks/row-testimonials"
 import RowMenuListing from "../components/bloks/row-menu-listing"
 import Hoagie from "../components/bloks/hoagie"
 import Pizza from "../components/bloks/pizza"
+import Salsa from "../components/bloks/salsa"
 import RowThreeSteps from "../components/bloks/row-three-steps"
 import Step from "../components/bloks/step"
 import RowMenuTeaserOneOff from "../components/bloks/row-menu-teaser-one-off"
@@ -81,6 +82,7 @@ storyblokInit({
     "row-menu-listing": RowMenuListing,
     hoagie: Hoagie,
     pizza: Pizza,
+    salsa: Salsa,
     "row-steps": RowThreeSteps,
     step: Step,
     "row-menu-teaser-one-off": RowMenuTeaserOneOff,
@@ -133,16 +135,15 @@ function MyApp({ Component, pageProps }) {
     }
 
     // gtag route change
-    const handleRouteChange = (url) => {
-      gtag.pageview(url);
-    };
+    const handleRouteChange = url => {
+      gtag.pageview(url)
+    }
 
-    router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange)
     return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-    
-  }, [router.events]);
+      router.events.off("routeChangeComplete", handleRouteChange)
+    }
+  }, [router.events])
 
   return (
     <>
