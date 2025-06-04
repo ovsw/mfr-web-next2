@@ -43,7 +43,7 @@ const Salsa = ({ blok: hoagie }) => {
           <div className="text-base max-w-prose lg:max-w-lg px-6 lg:px-0 space-y-8">
             <div>
               <h2 className="mt-2 text-3xl leading-8 tracking-tight text-gray-900 sm:text-4xl">
-                <span className="font-bold">{name}</span> Pizza
+                <span className="font-bold">{name}</span>
               </h2>
             </div>
 
