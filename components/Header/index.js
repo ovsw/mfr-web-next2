@@ -178,13 +178,13 @@ const fundraisers = [
     href: "/get-assistance",
     icon: PhoneIcon,
   },
-  // {
-  //   name: "Schedule a Free Tasting",
-  //   description:
-  //     "Sample our famous food, and get a personal consultation from our experts.",
-  //   href: "/schedule-a-free-tasting",
-  //   icon: CalendarIcon,
-  // },
+  {
+    name: "Schedule a Free Tasting",
+    description:
+      "Sample our famous food, and get a personal consultation from our experts.",
+    href: "/schedule-a-free-tasting",
+    icon: CalendarIcon,
+  },
   {
     name: "Find a Sale",
     description:
