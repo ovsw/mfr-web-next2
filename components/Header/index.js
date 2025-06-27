@@ -192,6 +192,13 @@ const fundraisers = [
     href: "/find-a-sale",
     icon: SearchIcon,
   },
+  {
+    name: "Fund Fiesta Salsa",
+    description:
+      "New summer fundraiser kicking off.",
+    href: "/flavored-salsas",
+    icon: StarIcon,
+  },
   // {
   //   name: "Special Fundraising Events",
   //   description:

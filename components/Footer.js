@@ -9,7 +9,7 @@ const navigation = {
     { name: "How it Works", href: "/how-it-works/" },
     { name: "Benefits", href: "/the-fundraiser-that-sells-itself/" },
     { name: "Menu", href: "/products" },
-    // { name: "Schedule Free Tasting", href: "/schedule-a-free-tasting/" },
+    { name: "Schedule Free Tasting", href: "/schedule-a-free-tasting/" },
   ],
   // aboutUs: [
   //   // { name: "Fresh & Clean Obsessed", href: "/fresh-and-clean-obsessed/" },
