@@ -98,8 +98,8 @@ const Header = ({ props }) => {
                 {/* <Link href="/schedule-a-free-tasting">
                   <a
                     className="
-              whitespace-nowrap 
-              flex items-center justify-center 
+              whitespace-nowrap
+              flex items-center justify-center
               btn btn-outlined-accent
               btn-small
               "
@@ -110,8 +110,8 @@ const Header = ({ props }) => {
                 <Link href="/submit-your-order">
                   <a
                     className="
-              whitespace-nowrap 
-              flex items-center justify-center 
+              whitespace-nowrap
+              flex items-center justify-center
               btn btn-outlined-primary
               btn-small
               "
@@ -195,7 +195,7 @@ const fundraisers = [
   {
     name: "Fund Fiesta Salsa",
     description:
-      "New summer fundraiser kicking off.",
+      "A new tasty fundraising option.",
     href: "/flavored-salsas",
     icon: StarIcon,
   },
