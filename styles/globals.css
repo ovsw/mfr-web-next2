@@ -273,3 +273,51 @@
     transform: translateY(4.8rem) scale(0.5);
   }
 }
+
+/* Match DG2Go's separate, two-part US privacy control. */
+.footer__us-privacy-controls {
+  display: inline-flex;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid #333;
+  border-radius: 0.25rem;
+  background: #fff;
+  color: #333;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.footer__us-privacy-controls a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.footer__us-privacy-controls a + a {
+  border-left: 1px solid #333;
+}
+.footer__us-privacy-controls a:hover {
+  background: #eee;
+}
+.footer__us-privacy-controls a:focus-visible {
+  outline: 2px solid #333;
+  outline-offset: -3px;
+}
+.footer__us-privacy-controls img {
+  width: 1.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+}
+@media (max-width: 380px) {
+  .footer__us-privacy-controls {
+    flex-direction: column;
+  }
+  .footer__us-privacy-controls a + a {
+    border-left: 0;
+    border-top: 1px solid #333;
+  }
+}

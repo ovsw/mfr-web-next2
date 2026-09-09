@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import Script from "next/script"
 
 import FooterLogo from "../public/images/mariannas-fundraisers_2022_alt_white_wordmark.png"
 import DelGrossoBadge from "../public/images/from-the-kitchens-of-delgrosso-badge.png"
@@ -38,22 +39,18 @@ const navigation = {
     {
       name: "Privacy Policy",
       href: "https://www.iubenda.com/privacy-policy/52141374",
+      className: "iubenda-nostyle no-brand iubenda-noiframe iubenda-embed",
     },
     {
       name: "Cookie Policy",
       href: "https://www.iubenda.com/privacy-policy/52141374/cookie-policy",
+      className: "iubenda-nostyle no-brand iubenda-noiframe iubenda-embed",
     },
     {
-      name: "Notice at Collection",
-      href: "https://www.iubenda.com/privacy-policy/52141374/cookie-policy?an=no&s_ck=false&newmarkup=yes",
-      className: "iubenda-cs-uspr-link",
+      name: "Terms & Conditions",
+      href: "https://www.iubenda.com/terms-and-conditions/52141374",
+      className: "iubenda-nostyle no-brand iubenda-noiframe iubenda-embed",
     },
-    {
-      name: "Your Privacy Choices",
-      href: "https://www.iubenda.com/privacy-policy/52141374/legal#privacy_rights_under_us_state_laws",
-      className: "iubenda-cs-preferences-link",
-    },
-    { name: "Terms & Conditions", href: "/terms-and-conditions" },
   ],
   social: [
     {
@@ -132,6 +129,11 @@ const navigation = {
 export default function SiteFooter() {
   return (
     <footer className="bg-primary-600" aria-labelledby="footer-heading">
+      {/* Footer persists across Next route changes; bind official lightboxes once. */}
+      <Script
+        src="https://cdn.iubenda.com/iubenda.js"
+        strategy="afterInteractive"
+      />
       <h2 id="footer-heading" className="sr-only text-white">
         Footer
       </h2>
@@ -180,6 +182,42 @@ export default function SiteFooter() {
               </a>
               .
             </p>
+
+            <address className="not-italic text-stone-300 space-y-4">
+              <p>
+                <a
+                  className="underline text-white"
+                  href="mailto:mariannas@delgrossos.com"
+                >
+                  mariannas@delgrossos.com
+                </a>
+              </p>
+              <p>
+                627 Sauce Factory Drive
+                <br />
+                PO Box 332, Tipton, PA 16684
+              </p>
+            </address>
+            <div className="footer__us-privacy-controls">
+              <a
+                href="https://www.iubenda.com/privacy-policy/52141374/cookie-policy?an=no&s_ck=false&newmarkup=yes"
+                className="iubenda-cs-uspr-link"
+              >
+                Notice at Collection
+              </a>
+              <a
+                href="https://www.iubenda.com/privacy-policy/52141374/legal?an=no&s_ck=false&newmarkup=yes#privacy_rights_under_us_state_laws"
+                className="iubenda-cs-preferences-link"
+              >
+                <img
+                  src="/images/privacy-choices.svg"
+                  width="30"
+                  height="14"
+                  alt=""
+                />
+                Your Privacy Choices
+              </a>
+            </div>
 
             <div className="flex space-x-6 items-center">
               <p>
