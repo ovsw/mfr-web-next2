@@ -35,7 +35,24 @@ const navigation = {
   legal: [
     { name: "Accessibility Statement", href: "/accessibility-statement" },
     { name: "Accessibility Policy", href: "/accessibility-policy" },
-    { name: "Privacy Policy", href: "/privacy-policy" },
+    {
+      name: "Privacy Policy",
+      href: "https://www.iubenda.com/privacy-policy/52141374",
+    },
+    {
+      name: "Cookie Policy",
+      href: "https://www.iubenda.com/privacy-policy/52141374/cookie-policy",
+    },
+    {
+      name: "Notice at Collection",
+      href: "https://www.iubenda.com/privacy-policy/52141374/cookie-policy?an=no&s_ck=false&newmarkup=yes",
+      className: "iubenda-cs-uspr-link",
+    },
+    {
+      name: "Your Privacy Choices",
+      href: "https://www.iubenda.com/privacy-policy/52141374/legal#privacy_rights_under_us_state_laws",
+      className: "iubenda-cs-preferences-link",
+    },
     { name: "Terms & Conditions", href: "/terms-and-conditions" },
   ],
   social: [
@@ -233,7 +250,12 @@ export default function SiteFooter() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.legal.map(item => (
                     <li key={item.name}>
-                      <a href={item.href} className="footer-col-list-item">
+                      <a
+                        href={item.href}
+                        className={["footer-col-list-item", item.className]
+                          .filter(Boolean)
+                          .join(" ")}
+                      >
                         {item.name}
                       </a>
                     </li>

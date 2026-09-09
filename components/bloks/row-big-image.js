@@ -6,7 +6,8 @@
 // bool: "is_reversed"
 
 import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useTrackingAllowed } from "../../utils/privacy"
 import { blockIterator } from "../../utils/blockIterator"
 import { Image } from "@storyofams/storyblok-toolkit"
 
@@ -47,6 +48,11 @@ const Row = ({ blok: rowBigImage }) => {
     : "px-5"
 
   const [toggler, setToggler] = useState(false)
+  const [privacyUnavailable, setPrivacyUnavailable] = useState(false)
+  const allowed = useTrackingAllowed()
+  useEffect(() => {
+    if (!allowed) setToggler(false)
+  }, [allowed])
 
   const { id } = getVideoId(youTubeLink)
 
@@ -100,7 +106,21 @@ const Row = ({ blok: rowBigImage }) => {
                 bg-primary-900/40 rounded-2xl
                 
                 "
-                onClick={() => setToggler(!toggler)}
+                onClick={() => {
+                  if (allowed) setToggler(!toggler)
+                  else {
+                    const openPreferences =
+                      window._iub?.cs?.api?.openPreferences
+                    if (typeof openPreferences === "function") {
+                      setPrivacyUnavailable(false)
+                      try {
+                        window._iub.cs.api.openPreferences()
+                      } catch (_) {
+                        setPrivacyUnavailable(true)
+                      }
+                    } else setPrivacyUnavailable(true)
+                  }
+                }}
               >
                 <span
                   className="text-white relative
@@ -112,7 +132,9 @@ const Row = ({ blok: rowBigImage }) => {
                   "
                 >
                   <PlayIcon className="w-40 h-40" aria-hidden="true" />
-                  <span className="text-lg">play video</span>
+                  <span className="text-lg">
+                    {allowed ? "play video" : "Privacy choices for video"}
+                  </span>
                 </span>
               </button>
             </>
@@ -122,15 +144,31 @@ const Row = ({ blok: rowBigImage }) => {
       </div>
       {/* END IMAGE */}
 
+      {privacyUnavailable && !allowed && (
+        <p role="status" className="relative mt-4 p-4 bg-white text-gray-900">
+          Privacy controls could not open. Reload this page to try again, or{" "}
+          <a
+            className="underline"
+            href={`https://www.youtube.com/watch?v=${encodeURIComponent(id)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            watch this video on YouTube
+          </a>
+          .
+        </p>
+      )}
       {/* VIDEO LIGHTBOX SOURCE */}
-      {id && (
+      {id && allowed && (
         <FsLightbox
           toggler={toggler}
           type="youtube"
           sources={[
             <iframe
               id="custom-source"
-              frameborder="0"
+              title="Marianna’s Fundraisers video"
+              data-cmp-ab="1"
+              frameBorder="0"
               width="1920px"
               height="1080px"
               allow="autoplay; fullscreen"

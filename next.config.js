@@ -1,6 +1,11 @@
 module.exports = {
   async redirects() {
     return [
+      {
+        source: "/privacy-policy",
+        destination: "https://www.iubenda.com/privacy-policy/52141374",
+        permanent: true,
+      },
       // {
       //   source: "/products",
       //   destination: "/menu",
