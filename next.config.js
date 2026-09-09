@@ -1,4 +1,12 @@
 module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: "/legal/dispute-provisions",
+        destination: "/legal/dispute-provisions/index.html",
+      },
+    ]
+  },
   async redirects() {
     return [
       {
