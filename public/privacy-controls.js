@@ -30,6 +30,11 @@
 
   window._iub = window._iub || []
   var config = window._iub.csConfiguration = window._iub.csConfiguration || {}
+  // vercel.app is a public suffix. Iubenda's inferred .vercel.app cookie
+  // domain is rejected, so previews must store consent on their own host.
+  if (window.location.hostname.endsWith(".vercel.app")) {
+    config.localConsentDomainExact = true
+  }
   var callbacks = config.callback = config.callback || {}
   ;["onReady", "onPreferenceExpressed", "onPreferenceExpressedOrNotNeeded"].forEach(function (name) {
     var previous = callbacks[name]
