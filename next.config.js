@@ -2,6 +2,17 @@ module.exports = {
   async redirects() {
     return [
       {
+        source: "/terms-and-conditions",
+        destination: "https://www.iubenda.com/terms-and-conditions/52141374",
+        permanent: true,
+      },
+      {
+        source: "/cookie-policy",
+        destination:
+          "https://www.iubenda.com/privacy-policy/52141374/cookie-policy",
+        permanent: true,
+      },
+      {
         source: "/privacy-policy",
         destination: "https://www.iubenda.com/privacy-policy/52141374",
         permanent: true,
